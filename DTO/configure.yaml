@@ -1,0 +1,11 @@
+---
+log_file: dto.log
+broker_hosts:
+  - tanagra
+  - 61613
+mount_command_topic: lorax.TiMo.DTO.Mount
+mount_incoming_topic: lorax.TiMo.Mount.Broadcast
+camera_command_topic: lorax.TiMo.DTO.Camera
+camera_incoming_topic: lorax.TiMo.Camera.Broadcast
+mount_type: PWI4
+camera_type: SBIG ST-10X
