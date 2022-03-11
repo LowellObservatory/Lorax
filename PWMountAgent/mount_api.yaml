@@ -1,0 +1,144 @@
+asyncapi: 2.3.0
+info:
+  title: Lorax Mount Agent API
+  version: 1.0.0
+  description: |-
+    This is the interface from a Lorax Mount Agent to the rest of the system.
+    Allows the Digital Telescope Operator to interact with a Mount Agent.
+    Using it you can:
+    * Control a telescope mount
+    * Receive status information from the mount
+  contact:
+    name: Lorax Support
+    email: loraxgroup@lowell.edu
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+  prototyping:
+    url: tanagra.lowell.edu
+    protocol: stomp
+    protocolVersion: "1.2"
+    description: Prototyping server.
+    variables:
+      port:
+        default: "61613"
+channels:
+  lorax.telescopename.DTO.Mount:
+    publish:
+      message:
+        oneOf:
+          - $ref: "#/components/messages/status"
+          - $ref: "#/components/messages/connectMount"
+          - $ref: "#/components/messages/disconnectMount"
+          - $ref: "#/components/messages/enableMount"
+          - $ref: "#/components/messages/disableMount"
+          - $ref: "#/components/messages/homeMount"
+          - $ref: "#/components/messages/gotoAltAz"
+          - $ref: "#/components/messages/gotoRaDecJ2000"
+          - $ref: "#/components/messages/parkMount"
+          - $ref: "#/components/messages/loadMountModel"
+          - $ref: "#/components/messages/saveMountModel"
+          - $ref: "#/components/messages/trackingOn"
+          - $ref: "#/components/messages/trackingOff"
+  lorax.telescopename.Mount.Broadcast:
+    subscribe:
+      message:
+        payload:
+          $ref: "#/components/schemas/statusPayload"
+components:
+  messages:
+    status:
+      description: Request the status of the mount
+      payload:
+        type: "null"
+    connectMount:
+      description: Connect to the mount
+      payload:
+        type: "null"
+    disconnectMount:
+      description: Disconnect from the mount
+      payload:
+        type: "null"
+    enableMount:
+      description: Enable the mount
+      payload:
+        type: "null"
+    disableMount:
+      description: Disable the mount
+      payload:
+        type: "null"
+    homeMount:
+      description: Send mount to home position
+      payload:
+        type: "null"
+    gotoAltAz:
+      description: Send mount to a given altitude/azimuth
+      payload:
+        $ref: "#/components/schemas/gotoAltAzPayload"
+    gotoRaDecJ2000:
+      description: Send mount to a given RA/DEC in J2000 coordinates
+      payload:
+        $ref: "#/components/schemas/gotoRaDecJ2000Payload"
+    parkMount:
+      description: Send mount to park position
+      payload:
+        type: "null"
+    loadMountModel:
+      description: Load a pointing model from a file
+      payload:
+        type: object
+        properties:
+          filename:
+            type: string
+    saveMountModel:
+      description: Save the current pointing model to a file
+      payload:
+        type: object
+        properties:
+          filename:
+            type: string
+    trackingOn:
+      description: Turn on mount tracking
+      payload:
+        type: "null"
+    trackingOff:
+      description: Turn off mount tracking
+      payload:
+        type: "null"
+  schemas:
+    gotoAltAzPayload:
+      type: object
+      properties:
+        altitude:
+          type: number
+        azimuth:
+          type: number
+    gotoRaDecJ2000Payload:
+      type: object
+      properties:
+        ra_hours:
+          type: number
+        dec_degrees:
+          type: number
+    statusPayload:
+      type: object
+      properties:
+        mount_altitude_degrees:
+          type: number
+        mount_azimuth_degrees:
+          type: number
+        mount_is_connected:
+          type: boolean
+        mount_is_slewing:
+          type: boolean
+        mount_is_tracking:
+          type: boolean
+        mount_model_filename:
+          type: string
+        mount_julian_date:
+          type: number
+        mount_ra_j2000_hours:
+          type: number
+        mount_dec_j2000_degrees:
+          type: number

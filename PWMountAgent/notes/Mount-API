@@ -1,0 +1,210 @@
+
+    def status(self):
+
+    def mount_connect(self):
+
+    def mount_disconnect(self):
+
+    def mount_enable(self, axisNum):
+
+    def mount_disable(self, axisNum):
+
+    def mount_set_slew_time_constant(self, value):
+
+    def mount_find_home(self):
+
+    def mount_stop(self):
+
+    def mount_goto_ra_dec_apparent(self, ra_hours, dec_degs):
+
+    def mount_goto_ra_dec_j2000(self, ra_hours, dec_degs):
+
+    def mount_goto_alt_az(self, alt_degs, az_degs):
+
+    def mount_goto_coord_pair(self, coord0, coord1, coord_type):
+        """
+        Set the mount target to a pair of coordinates in a
+        specified coordinate system.
+        coord_type: can currently be "altaz" or "raw"
+        coord0: the azimuth coordinate for the "altaz" type,
+        or the axis0 coordiate for the "raw" type
+        coord1: the altitude coordinate for the "altaz" type,
+        or the axis1 coordinate for the "raw" type
+        """
+
+    def mount_offset(self, **kwargs):
+        """
+        One or more of the following offsets can be specified as
+        a keyword argument:
+
+          AXIS_reset: Clear all position and rate offsets for this axis.
+                      Set this to any value to issue the command.
+          AXIS_stop_rate: Set any active offset rate to zero. Set this
+                          to any value to issue the command.
+          AXIS_add_arcsec: Increase the current position offset by the
+                           specified amount
+          AXIS_set_rate_arcsec_per_sec: Continually increase the offset
+                                        at the specified rate
+
+        As of PWI 4.0.11 Beta 7, the following options are also supported:
+          AXIS_stop: Stop both the offset rate and any gradually-applied
+                     commands
+          AXIS_stop_gradual_offset: Stop only the gradually-applied offset,
+                                    and maintain the current rate
+          AXIS_set_total_arcsec: Set the total accumulated offset at the
+                                 time the command is received to the specified
+                                 value. Any in-progress rates or gradual
+                                 offsets will continue to be applied on top
+                                 of this.
+        AXIS_add_gradual_offset_arcsec: Gradually add the specified value to
+          the total accumulated offset. Must be paired with
+          AXIS_gradual_offset_rate or AXIS_gradual_offset_seconds to determine
+          the timeframe over which the gradual offset is applied.
+        AXIS_gradual_offset_rate: Paired with AXIS_add_gradual_offset_arcsec;
+          Specifies the rate at which a gradual offset should be applied. For
+          example, if an offset of 10 arcseconds is to be applied at a rate
+          of 2 arcsec/sec, then it will take 5 seconds for the offset to
+          be applied.
+        AXIS_gradual_offset_seconds: Paired with AXIS_add_gradual_offset_arcsec;
+          Specifies the time it should take to apply the gradual offset. For
+          example, if an offset of 10 arcseconds is to be applied over a
+          period of 2 seconds, then the offset will be increasing at a rate
+          of 5 arcsec/sec.
+
+        Where AXIS can be one of:
+
+        ra: Offset the target Right Ascension coordinate
+        dec: Offset the target Declination coordinate
+        axis0: Offset the mount's primary axis position 
+               (roughly Azimuth on an Alt-Az mount, or RA on an
+                equatorial mount)
+        axis1: Offset the mount's secondary axis position 
+               (roughly Altitude on an Alt-Az mount, or Dec on an
+                equatorial mount)
+        path: Offset along the direction of travel for a moving target
+        transverse: Offset perpendicular to the direction of travel for
+                    a moving target
+
+        For example, to offset axis0 by -30 arcseconds and have it
+        continually increase at 1 arcsec/sec, and to also clear any
+        existing offset in the transverse direction, you could call
+        the method like this:
+
+        mount_offset(axis0_add_arcsec=-30, axis0_set_rate_arcsec_per_sec=1,
+          transverse_reset=0)
+
+        """
+
+    def mount_spiral_offset_new(self, x_step_arcsec, y_step_arcsec):
+        # Added in PWI 4.0.11 Beta 8
+
+    def mount_spiral_offset_next(self):
+        # Added in PWI 4.0.11 Beta 8
+
+    def mount_spiral_offset_previous(self):
+        # Added in PWI 4.0.11 Beta 8
+
+    def mount_park(self):
+
+    def mount_set_park_here(self):
+
+    def mount_tracking_on(self):
+
+    def mount_tracking_off(self):
+
+    def mount_follow_tle(self, tle_line_1, tle_line_2, tle_line_3):
+
+    def mount_radecpath_new(self):
+
+    def mount_radecpath_add_point(self, jd, ra_j2000_hours, dec_j2000_degs):
+
+    def mount_radecpath_apply(self):
+
+    def mount_custom_path_new(self, coord_type):
+
+    def mount_custom_path_add_point_list(self, points):
+
+    def mount_custom_path_apply(self):
+
+    def mount_model_add_point(self, ra_j2000_hours, dec_j2000_degs):
+
+    def mount_model_clear_points(self):
+
+    def mount_model_save_as_default(self):
+
+    def mount_model_save(self, filename):
+
+    def mount_model_load(self, filename):
+
+    def focuser_enable(self):
+
+    def focuser_disable(self):
+
+    def focuser_goto(self, target):
+
+    def focuser_stop(self):
+
+    def rotator_enable(self):
+
+    def rotator_disable(self):
+        
+    def rotator_goto_mech(self, target_degs):
+
+    def rotator_goto_field(self, target_degs):
+
+    def rotator_offset(self, offset_degs):
+
+    def rotator_stop(self):
+
+    def m3_goto(self, target_port):
+
+    def m3_stop(self):
+
+    def virtualcamera_take_image(self):
+        """
+        Returns a string containing a FITS image simulating a starfield
+        at the current telescope position
+        """
+    
+    def virtualcamera_take_image_and_save(self, filename):
+        """
+        Request a fake FITS image from PWI4.
+        Save the contents to the specified filename
+        """
+
+    ### Methods for testing error handling ######################
+
+    def test_command_not_found(self):
+        """
+        Try making a request to a URL that does not exist.
+        Useful for intentionally testing how the library will respond.
+        """
+
+    def test_internal_server_error(self):
+        """
+        Try making a request to a URL that will return a 500
+        server error due to an intentionally unhandled error.
+        Useful for testing how the library will respond.
+        """
+    
+    def test_invalid_parameters(self):
+        """
+        Try making a request with intentionally missing parameters.
+        Useful for testing how the library will respond.
+        """
+
+    ### Low-level methods for issuing requests ##################
+
+    def request(self, command, **kwargs):
+
+    def request_with_status(self, command, **kwargs):
+    
+    ### Status parsing utilities ################################
+
+    def status_text_to_dict(self, response):
+        """
+        Given text with keyword=value pairs separated by newlines,
+        return a dictionary with the equivalent contents.
+        """
+    def parse_status(self, response_text):
+    
