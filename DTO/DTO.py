@@ -21,7 +21,7 @@ class DTO:
     def __init__(self):
 
         # Read the config file.
-        with open("configure.yaml", "r") as stream:
+        with open("DTO/configure.yaml", "r") as stream:
             try:
                 self.config = yaml.safe_load(stream)
             except yaml.YAMLError as exc:
@@ -36,7 +36,7 @@ class DTO:
             level=logging.DEBUG,
             datefmt="%Y-%m-%d %H:%M:%S",
         )
-        self.dto_logger = logging.getLogger("pw_mount_log")
+        self.dto_logger = logging.getLogger("dto_log")
 
         # Tell em we've started.
         self.dto_logger.info("Initializing: logging started")
