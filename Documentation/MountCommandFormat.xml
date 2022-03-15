@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<command>
+    <telescope>TiMo</telescope>
+    <device>mount</device>
+    <tag>planewave</tag>
+    <timestampdt>2022-03-14T03:00:00.0000+00:00</timestampdt>
+    <command>gotoAltAz</command>
+    <argument type='alitiude'>45.0</argument>
+    <argument type='azimuth'>200.0</argument>
+</command>

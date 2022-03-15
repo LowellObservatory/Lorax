@@ -17,6 +17,7 @@ logging.getLogger("stomp").setLevel(logging.WARNING)
 class DTO:
     hosts = ""
     log_file = ""
+    command_input_file = ""
 
     def __init__(self):
 
@@ -89,6 +90,8 @@ class DTO:
             "subscribed to topic " + self.config["camera_incoming_topic"]
         )
 
+        self.command_input_file = self.config["command_input_file"]
+
     def send_hello(self):
         self.conn.send(
             body="Hello World",
@@ -114,8 +117,15 @@ if __name__ == "__main__":
     dto = DTO()
     dto.send_hello()
 
-"""
-Loop {
-    If command is exit
-        exit
-} """
+    print(dto.command_input_file)
+    with open(dto.command_input_file) as fp:
+        line = fp.readline()
+        cnt = 1
+        while line:
+            print("Line {}: {}".format(cnt, line.strip()))
+            dto.conn.send(
+                body=line.strip(),
+                destination="/topic/" + dto.config["mount_command_topic"],
+            )
+            line = fp.readline()
+            cnt += 1
