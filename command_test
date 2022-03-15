@@ -1,6 +1,6 @@
 mount: connectMount
 mount: enableMount
-moiunt: homeMount
+mount: homeMount
 mount: gotoAltAZ(45.0, 200.0)
 mount: gotoAltAZ(60.0, 100.0)
 mount: gotoAltAZ(30.0, 300.0)
