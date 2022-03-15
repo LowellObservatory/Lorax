@@ -110,7 +110,6 @@ class DTO:
         def on_message(self, message):
             # print('received a message "%s"' % message)
             self.parent.dto_logger.info('received a message "%s"' % message.body)
-            # self.parent.planewave_mount_talk.send_command_to_mount(message.body)
 
 
 if __name__ == "__main__":
@@ -127,5 +126,6 @@ if __name__ == "__main__":
                 body=line.strip(),
                 destination="/topic/" + dto.config["mount_command_topic"],
             )
+            time.sleep(0.1)
             line = fp.readline()
             cnt += 1

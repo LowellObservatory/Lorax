@@ -9,6 +9,7 @@ import time
 import logging
 import stomp
 import yaml
+import os
 
 from PlanewaveMountTalk import PlanewaveMountTalk
 
@@ -21,6 +22,7 @@ class PlanewaveMountAgent:
     log_file = ""
     mount_host = ""
     mount_port = 0
+    current_message = ""
 
     def __init__(self):
 
@@ -84,7 +86,7 @@ class PlanewaveMountAgent:
         self.mount_host = self.config["mount_host"]
         self.mount_port = self.config["mount_port"]
 
-        self.planewave_mount_talk = PlanewaveMountTalk(
+        """ self.planewave_mount_talk = PlanewaveMountTalk(
             self, host=self.mount_host, port=self.mount_port
         )
 
@@ -96,7 +98,7 @@ class PlanewaveMountAgent:
 
         # Disconnect from the mount.
         self.mount_logger.info("disconnecting from mount")
-        self.planewave_mount_talk.disconnect_from_mount()
+        self.planewave_mount_talk.disconnect_from_mount() """
 
     def send_hello(self):
         self.conn.send(
@@ -115,15 +117,19 @@ class PlanewaveMountAgent:
             print('received an error "%s"' % message)
 
         def on_message(self, message):
-            # print('received a message "%s"' % message)
+            print('received a message "%s"' % message)
             self.parent.mount_logger.info('received a message "%s"' % message.body)
+            self.parent.current_message = message.body
             # self.parent.planewave_mount_talk.send_command_to_mount(message.body)
 
 
 if __name__ == "__main__":
     pwma = PlanewaveMountAgent()
-    pwma.send_hello()
+    # pwma.send_hello()
 
+    while True:
+        if pwma.current_message == "end":
+            os._exit(0)
 """
 
 Request status from Mount, broadcast to broker
