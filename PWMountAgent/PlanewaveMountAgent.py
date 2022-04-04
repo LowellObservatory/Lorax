@@ -23,6 +23,7 @@ class PlanewaveMountAgent:
     mount_host = ""
     mount_port = 0
     current_message = ""
+    message_received = 0
 
     def __init__(self):
 
@@ -86,11 +87,11 @@ class PlanewaveMountAgent:
         self.mount_host = self.config["mount_host"]
         self.mount_port = self.config["mount_port"]
 
-        """ self.planewave_mount_talk = PlanewaveMountTalk(
+        self.planewave_mount_talk = PlanewaveMountTalk(
             self, host=self.mount_host, port=self.mount_port
         )
 
-        # Connect to the mount.
+        """ # Connect to the mount.
         self.mount_logger.info("connecting to mount")
         self.planewave_mount_talk.connect_to_mount()
 
@@ -99,14 +100,6 @@ class PlanewaveMountAgent:
         # Disconnect from the mount.
         self.mount_logger.info("disconnecting from mount")
         self.planewave_mount_talk.disconnect_from_mount() """
-
-    def send_hello(self):
-        self.conn.send(
-            body="Hello World", destination="/topic/" + self.config["incoming_topic"]
-        )
-        time.sleep(2)
-        # print(self.config["incoming_topic"])
-        # self.conn.disconnect()
 
     class MyListener(stomp.ConnectionListener):
         def __init__(self, parent):
@@ -117,19 +110,26 @@ class PlanewaveMountAgent:
             print('received an error "%s"' % message)
 
         def on_message(self, message):
-            print('received a message "%s"' % message)
+            # print('received a message "%s"' % message)
+
             self.parent.mount_logger.info('received a message "%s"' % message.body)
             self.parent.current_message = message.body
+            self.parent.message_received = 1
             # self.parent.planewave_mount_talk.send_command_to_mount(message.body)
 
 
 if __name__ == "__main__":
     pwma = PlanewaveMountAgent()
-    # pwma.send_hello()
 
     while True:
-        if pwma.current_message == "end":
-            os._exit(0)
+        if pwma.message_received:
+            if pwma.current_message == "end":
+                os._exit(0)
+            else:
+                pwma.planewave_mount_talk.send_command_to_mount(pwma.current_message)
+            pwma.message_received = 0
+            time.sleep(0.01)
+
 """
 
 Request status from Mount, broadcast to broker

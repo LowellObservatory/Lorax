@@ -1,0 +1,352 @@
+2022-04-04 09:48:43 INFO     Initializing: logging started
+2022-04-04 09:48:43 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 09:48:43 INFO     connected to broker
+2022-04-04 09:48:43 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 09:48:43 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 09:50:25 INFO     received a message ": connectMount"
+2022-04-04 09:50:25 INFO     received a message ": enableMount"
+2022-04-04 09:50:25 INFO     received a message ": homeMount"
+2022-04-04 09:50:25 INFO     received a message ": gotoAltAZ(45.0, 200.0)"
+2022-04-04 09:50:25 INFO     received a message ": gotoAltAZ(60.0, 100.0)"
+2022-04-04 09:50:25 INFO     received a message ": gotoAltAZ(30.0, 300.0)"
+2022-04-04 09:50:25 INFO     received a message ": parkMount"
+2022-04-04 09:50:25 INFO     received a message ": disableMount"
+2022-04-04 09:50:25 INFO     received a message ": disconnectMount"
+2022-04-04 09:50:25 INFO     received a message "d"
+2022-04-04 09:53:06 INFO     Initializing: logging started
+2022-04-04 09:53:06 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 09:53:06 INFO     connected to broker
+2022-04-04 09:53:06 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 09:53:06 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 09:53:12 INFO     received a message "connectMount"
+2022-04-04 09:53:12 INFO     received a message "enableMount"
+2022-04-04 09:53:12 INFO     received a message "homeMount"
+2022-04-04 09:53:12 INFO     received a message "gotoAltAZ(45.0, 200.0)"
+2022-04-04 09:53:12 INFO     received a message "gotoAltAZ(60.0, 100.0)"
+2022-04-04 09:53:12 INFO     received a message "gotoAltAZ(30.0, 300.0)"
+2022-04-04 09:53:12 INFO     received a message "parkMount"
+2022-04-04 09:53:13 INFO     received a message "disableMount"
+2022-04-04 09:53:13 INFO     received a message "disconnectMount"
+2022-04-04 09:53:13 INFO     received a message "nd"
+2022-04-04 09:56:08 INFO     Initializing: logging started
+2022-04-04 09:56:08 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 09:56:08 INFO     connected to broker
+2022-04-04 09:56:08 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 09:56:08 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 09:56:17 INFO     received a message "connectMount"
+2022-04-04 09:56:17 INFO     received a message "enableMount"
+2022-04-04 09:56:17 INFO     received a message "homeMount"
+2022-04-04 09:56:17 INFO     received a message "gotoAltAZ(45.0, 200.0)"
+2022-04-04 09:56:17 INFO     received a message "gotoAltAZ(60.0, 100.0)"
+2022-04-04 09:56:18 INFO     received a message "gotoAltAZ(30.0, 300.0)"
+2022-04-04 09:56:18 INFO     received a message "parkMount"
+2022-04-04 09:56:18 INFO     received a message "disableMount"
+2022-04-04 09:56:18 INFO     received a message "disconnectMount"
+2022-04-04 09:56:18 INFO     received a message "end"
+2022-04-04 09:59:02 INFO     Initializing: logging started
+2022-04-04 09:59:02 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 09:59:02 INFO     connected to broker
+2022-04-04 09:59:02 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 09:59:02 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:02:55 INFO     Initializing: logging started
+2022-04-04 10:02:55 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:02:55 INFO     connected to broker
+2022-04-04 10:02:55 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:02:55 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:03:01 INFO     received a message "connectMount"
+2022-04-04 10:03:01 INFO     received a message "enableMount"
+2022-04-04 10:03:01 INFO     received a message "homeMount"
+2022-04-04 10:03:01 INFO     received a message "gotoAltAZ(45.0, 200.0)"
+2022-04-04 10:03:02 INFO     received a message "gotoAltAZ(60.0, 100.0)"
+2022-04-04 10:03:02 INFO     received a message "gotoAltAZ(30.0, 300.0)"
+2022-04-04 10:03:02 INFO     received a message "parkMount"
+2022-04-04 10:03:02 INFO     received a message "disableMount"
+2022-04-04 10:03:02 INFO     received a message "disconnectMount"
+2022-04-04 10:03:02 INFO     received a message "end"
+2022-04-04 10:03:54 INFO     Initializing: logging started
+2022-04-04 10:03:54 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:03:54 INFO     connected to broker
+2022-04-04 10:03:54 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:03:54 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:04:02 INFO     received a message "connectMount"
+2022-04-04 10:04:02 INFO     received a message "enableMount"
+2022-04-04 10:04:02 INFO     received a message "homeMount"
+2022-04-04 10:04:02 INFO     received a message "gotoAltAZ(45.0, 200.0)"
+2022-04-04 10:04:02 INFO     received a message "gotoAltAZ(60.0, 100.0)"
+2022-04-04 10:04:02 INFO     received a message "gotoAltAZ(30.0, 300.0)"
+2022-04-04 10:04:03 INFO     received a message "parkMount"
+2022-04-04 10:04:03 INFO     received a message "disableMount"
+2022-04-04 10:04:03 INFO     received a message "disconnectMount"
+2022-04-04 10:04:03 INFO     received a message "end"
+2022-04-04 10:04:18 INFO     Initializing: logging started
+2022-04-04 10:04:18 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:04:18 INFO     connected to broker
+2022-04-04 10:04:18 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:04:18 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:04:22 INFO     received a message "connectMount"
+2022-04-04 10:04:23 INFO     received a message "enableMount"
+2022-04-04 10:04:23 INFO     received a message "homeMount"
+2022-04-04 10:04:23 INFO     received a message "gotoAltAZ(45.0, 200.0)"
+2022-04-04 10:04:23 INFO     received a message "gotoAltAZ(60.0, 100.0)"
+2022-04-04 10:04:23 INFO     received a message "gotoAltAZ(30.0, 300.0)"
+2022-04-04 10:04:23 INFO     received a message "parkMount"
+2022-04-04 10:04:23 INFO     received a message "disableMount"
+2022-04-04 10:04:23 INFO     received a message "disconnectMount"
+2022-04-04 10:04:23 INFO     received a message "end"
+2022-04-04 10:04:45 INFO     Initializing: logging started
+2022-04-04 10:04:45 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:04:45 INFO     connected to broker
+2022-04-04 10:04:45 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:04:45 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:04:53 INFO     received a message "connectMount"
+2022-04-04 10:04:53 INFO     received a message "enableMount"
+2022-04-04 10:04:53 INFO     received a message "homeMount"
+2022-04-04 10:04:53 INFO     received a message "gotoAltAZ(45.0, 200.0)"
+2022-04-04 10:04:53 INFO     received a message "gotoAltAZ(60.0, 100.0)"
+2022-04-04 10:04:53 INFO     received a message "gotoAltAZ(30.0, 300.0)"
+2022-04-04 10:04:54 INFO     received a message "parkMount"
+2022-04-04 10:04:54 INFO     received a message "disableMount"
+2022-04-04 10:04:54 INFO     received a message "disconnectMount"
+2022-04-04 10:04:54 INFO     received a message "end"
+2022-04-04 10:07:00 INFO     Initializing: logging started
+2022-04-04 10:07:00 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:07:00 INFO     connected to broker
+2022-04-04 10:07:00 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:07:00 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:07:24 INFO     Initializing: logging started
+2022-04-04 10:07:24 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:07:24 INFO     connected to broker
+2022-04-04 10:07:24 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:07:24 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:07:29 INFO     received a message "connectMount"
+2022-04-04 10:07:29 INFO     received a message "enableMount"
+2022-04-04 10:07:29 INFO     received a message "homeMount"
+2022-04-04 10:07:29 INFO     received a message "gotoAltAZ(45.0, 200.0)"
+2022-04-04 10:07:29 INFO     received a message "gotoAltAZ(60.0, 100.0)"
+2022-04-04 10:07:29 INFO     received a message "gotoAltAZ(30.0, 300.0)"
+2022-04-04 10:07:30 INFO     received a message "parkMount"
+2022-04-04 10:07:30 INFO     received a message "disableMount"
+2022-04-04 10:07:30 INFO     received a message "disconnectMount"
+2022-04-04 10:07:30 INFO     received a message "end"
+2022-04-04 10:07:53 INFO     Initializing: logging started
+2022-04-04 10:07:53 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:07:53 INFO     connected to broker
+2022-04-04 10:07:53 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:07:53 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:08:00 INFO     received a message "connectMount"
+2022-04-04 10:08:00 INFO     received a message "enableMount"
+2022-04-04 10:08:00 INFO     received a message "homeMount"
+2022-04-04 10:08:00 INFO     received a message "gotoAltAZ(45.0, 200.0)"
+2022-04-04 10:08:00 INFO     received a message "gotoAltAZ(60.0, 100.0)"
+2022-04-04 10:08:00 INFO     received a message "gotoAltAZ(30.0, 300.0)"
+2022-04-04 10:08:01 INFO     received a message "parkMount"
+2022-04-04 10:08:01 INFO     received a message "disableMount"
+2022-04-04 10:08:01 INFO     received a message "disconnectMount"
+2022-04-04 10:08:01 INFO     received a message "end"
+2022-04-04 10:09:54 INFO     Initializing: logging started
+2022-04-04 10:09:54 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:09:54 INFO     connected to broker
+2022-04-04 10:09:54 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:09:54 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:10:01 INFO     received a message "connectMount"
+2022-04-04 10:10:42 INFO     Initializing: logging started
+2022-04-04 10:10:42 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:10:42 INFO     connected to broker
+2022-04-04 10:10:42 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:10:42 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:10:47 INFO     received a message "connectMount"
+2022-04-04 10:11:20 INFO     Initializing: logging started
+2022-04-04 10:11:20 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:11:20 INFO     connected to broker
+2022-04-04 10:11:20 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:11:20 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:11:25 INFO     received a message "connectMount"
+2022-04-04 10:11:25 INFO     received a message "enableMount"
+2022-04-04 10:11:25 INFO     received a message "homeMount"
+2022-04-04 10:11:25 INFO     received a message "gotoAltAz(45.0, 200.0)"
+2022-04-04 10:11:25 INFO     received a message "gotoAltAz(60.0, 100.0)"
+2022-04-04 10:11:25 INFO     received a message "gotoAltAz(30.0, 300.0)"
+2022-04-04 10:11:25 INFO     received a message "parkMount"
+2022-04-04 10:11:25 INFO     received a message "disableMount"
+2022-04-04 10:11:26 INFO     received a message "disconnectMount"
+2022-04-04 10:11:26 INFO     received a message "end"
+2022-04-04 10:16:15 INFO     Initializing: logging started
+2022-04-04 10:16:15 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:16:15 INFO     connected to broker
+2022-04-04 10:16:15 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:16:15 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:16:23 INFO     received a message "connectMount"
+2022-04-04 10:16:23 INFO     received a message "enableMount"
+2022-04-04 10:16:23 INFO     received a message "homeMount"
+2022-04-04 10:16:23 INFO     received a message "gotoAltAz(45.0, 200.0)"
+2022-04-04 10:16:23 INFO     received a message "gotoAltAz(60.0, 100.0)"
+2022-04-04 10:16:23 INFO     received a message "gotoAltAz(30.0, 300.0)"
+2022-04-04 10:16:23 INFO     received a message "parkMount"
+2022-04-04 10:16:23 INFO     received a message "disableMount"
+2022-04-04 10:16:24 INFO     received a message "disconnectMount"
+2022-04-04 10:16:24 INFO     received a message "end"
+2022-04-04 10:17:45 INFO     Initializing: logging started
+2022-04-04 10:17:45 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:17:45 INFO     connected to broker
+2022-04-04 10:17:45 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:17:45 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:17:51 INFO     received a message "connectMount"
+2022-04-04 10:17:51 INFO     received a message "enableMount"
+2022-04-04 10:17:51 INFO     received a message "homeMount"
+2022-04-04 10:17:51 INFO     received a message "gotoAltAz(45.0, 200.0)"
+2022-04-04 10:17:51 INFO     received a message "gotoAltAz(60.0, 100.0)"
+2022-04-04 10:17:51 INFO     received a message "gotoAltAz(30.0, 300.0)"
+2022-04-04 10:17:51 INFO     received a message "parkMount"
+2022-04-04 10:17:52 INFO     received a message "disableMount"
+2022-04-04 10:17:52 INFO     received a message "disconnectMount"
+2022-04-04 10:17:52 INFO     received a message "end"
+2022-04-04 10:18:48 INFO     Initializing: logging started
+2022-04-04 10:18:48 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:18:48 INFO     connected to broker
+2022-04-04 10:18:48 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:18:48 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:18:56 INFO     received a message "connectMount"
+2022-04-04 10:18:56 INFO     received a message "enableMount"
+2022-04-04 10:18:56 INFO     received a message "homeMount"
+2022-04-04 10:18:56 INFO     received a message "gotoAltAz(45.0, 200.0)"
+2022-04-04 10:18:56 INFO     received a message "gotoAltAz(60.0, 100.0)"
+2022-04-04 10:18:57 INFO     received a message "gotoAltAz(30.0, 300.0)"
+2022-04-04 10:18:57 INFO     received a message "parkMount"
+2022-04-04 10:18:57 INFO     received a message "disableMount"
+2022-04-04 10:18:57 INFO     received a message "disconnectMount"
+2022-04-04 10:18:57 INFO     received a message "end"
+2022-04-04 10:19:26 INFO     Initializing: logging started
+2022-04-04 10:19:26 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:19:26 INFO     connected to broker
+2022-04-04 10:19:26 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:19:26 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:19:33 INFO     received a message "connectMount"
+2022-04-04 10:19:33 INFO     received a message "enableMount"
+2022-04-04 10:19:33 INFO     received a message "homeMount"
+2022-04-04 10:19:33 INFO     received a message "gotoAltAz(45.0, 200.0)"
+2022-04-04 10:19:33 INFO     received a message "gotoAltAz(60.0, 100.0)"
+2022-04-04 10:19:33 INFO     received a message "gotoAltAz(30.0, 300.0)"
+2022-04-04 10:19:33 INFO     received a message "parkMount"
+2022-04-04 10:19:34 INFO     received a message "disableMount"
+2022-04-04 10:19:34 INFO     received a message "disconnectMount"
+2022-04-04 10:19:34 INFO     received a message "end"
+2022-04-04 10:20:08 INFO     Initializing: logging started
+2022-04-04 10:20:08 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:20:08 INFO     connected to broker
+2022-04-04 10:20:08 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:20:08 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:20:14 INFO     received a message "connectMount"
+2022-04-04 10:20:14 INFO     received a message "enableMount"
+2022-04-04 10:20:14 INFO     received a message "homeMount"
+2022-04-04 10:20:14 INFO     received a message "gotoAltAz(45.0, 200.0)"
+2022-04-04 10:20:14 INFO     received a message "gotoAltAz(60.0, 100.0)"
+2022-04-04 10:20:14 INFO     received a message "gotoAltAz(30.0, 300.0)"
+2022-04-04 10:20:14 INFO     received a message "parkMount"
+2022-04-04 10:20:14 INFO     received a message "disableMount"
+2022-04-04 10:20:14 INFO     received a message "disconnectMount"
+2022-04-04 10:20:15 INFO     received a message "end"
+2022-04-04 10:20:56 INFO     Initializing: logging started
+2022-04-04 10:20:56 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:20:56 INFO     connected to broker
+2022-04-04 10:20:56 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:20:56 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:21:05 INFO     received a message "connectMount"
+2022-04-04 10:21:05 INFO     received a message "enableMount"
+2022-04-04 10:21:05 INFO     received a message "homeMount"
+2022-04-04 10:21:06 INFO     received a message "gotoAltAz(45.0, 200.0)"
+2022-04-04 10:21:06 INFO     received a message "gotoAltAz(60.0, 100.0)"
+2022-04-04 10:21:06 INFO     received a message "gotoAltAz(30.0, 300.0)"
+2022-04-04 10:21:06 INFO     received a message "parkMount"
+2022-04-04 10:21:06 INFO     received a message "disableMount"
+2022-04-04 10:21:06 INFO     received a message "disconnectMount"
+2022-04-04 10:21:06 INFO     received a message "end"
+2022-04-04 10:21:45 INFO     Initializing: logging started
+2022-04-04 10:21:45 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:21:45 INFO     connected to broker
+2022-04-04 10:21:45 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:21:45 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:21:51 INFO     received a message "connectMount"
+2022-04-04 10:21:51 INFO     received a message "enableMount"
+2022-04-04 10:21:51 INFO     received a message "homeMount"
+2022-04-04 10:21:51 INFO     received a message "gotoAltAz(45.0, 200.0)"
+2022-04-04 10:21:51 INFO     received a message "gotoAltAz(60.0, 100.0)"
+2022-04-04 10:21:52 INFO     received a message "gotoAltAz(30.0, 300.0)"
+2022-04-04 10:21:52 INFO     received a message "parkMount"
+2022-04-04 10:21:52 INFO     received a message "disableMount"
+2022-04-04 10:21:52 INFO     received a message "disconnectMount"
+2022-04-04 10:21:52 INFO     received a message "end"
+2022-04-04 10:22:08 INFO     Initializing: logging started
+2022-04-04 10:22:08 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:22:08 INFO     connected to broker
+2022-04-04 10:22:08 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:22:08 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:22:14 INFO     received a message "connectMount"
+2022-04-04 10:22:15 INFO     received a message "enableMount"
+2022-04-04 10:22:15 INFO     received a message "homeMount"
+2022-04-04 10:22:15 INFO     received a message "gotoAltAz(45.0, 200.0)"
+2022-04-04 10:22:15 INFO     received a message "gotoAltAz(60.0, 100.0)"
+2022-04-04 10:22:15 INFO     received a message "gotoAltAz(30.0, 300.0)"
+2022-04-04 10:22:15 INFO     received a message "parkMount"
+2022-04-04 10:22:15 INFO     received a message "disableMount"
+2022-04-04 10:22:15 INFO     received a message "disconnectMount"
+2022-04-04 10:22:15 INFO     received a message "end"
+2022-04-04 10:22:46 INFO     Initializing: logging started
+2022-04-04 10:22:46 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:22:46 INFO     connected to broker
+2022-04-04 10:22:46 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:22:46 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:22:53 INFO     received a message "connectMount"
+2022-04-04 10:22:53 INFO     received a message "enableMount"
+2022-04-04 10:22:53 INFO     received a message "homeMount"
+2022-04-04 10:22:53 INFO     received a message "gotoAltAz(45.0, 200.0)"
+2022-04-04 10:22:53 INFO     received a message "gotoAltAz(60.0, 100.0)"
+2022-04-04 10:22:53 INFO     received a message "gotoAltAz(30.0, 300.0)"
+2022-04-04 10:22:53 INFO     received a message "parkMount"
+2022-04-04 10:22:53 INFO     received a message "disableMount"
+2022-04-04 10:22:53 INFO     received a message "disconnectMount"
+2022-04-04 10:22:53 INFO     received a message "end"
+2022-04-04 10:23:40 INFO     Initializing: logging started
+2022-04-04 10:23:40 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:23:40 INFO     connected to broker
+2022-04-04 10:23:40 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:23:40 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:23:45 INFO     received a message "connectMount"
+2022-04-04 10:23:46 INFO     received a message "enableMount"
+2022-04-04 10:23:46 INFO     received a message "homeMount"
+2022-04-04 10:23:46 INFO     received a message "gotoAltAz(45.0, 200.0)"
+2022-04-04 10:23:46 INFO     received a message "gotoAltAz(60.0, 100.0)"
+2022-04-04 10:23:46 INFO     received a message "gotoAltAz(30.0, 300.0)"
+2022-04-04 10:23:46 INFO     received a message "parkMount"
+2022-04-04 10:23:46 INFO     received a message "disableMount"
+2022-04-04 10:23:46 INFO     received a message "disconnectMount"
+2022-04-04 10:23:46 INFO     received a message "end"
+2022-04-04 10:30:10 INFO     Initializing: logging started
+2022-04-04 10:30:10 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:30:10 INFO     connected to broker
+2022-04-04 10:30:10 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:30:10 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:30:18 INFO     received a message "connectMount"
+2022-04-04 10:30:19 INFO     received a message "enableMount"
+2022-04-04 10:30:20 INFO     received a message "homeMount"
+2022-04-04 10:30:21 INFO     received a message "gotoAltAz(45.0, 200.0)"
+2022-04-04 10:30:22 INFO     received a message "gotoAltAz(60.0, 100.0)"
+2022-04-04 10:30:23 INFO     received a message "gotoAltAz(30.0, 300.0)"
+2022-04-04 10:30:24 INFO     received a message "parkMount"
+2022-04-04 10:30:25 INFO     received a message "disableMount"
+2022-04-04 10:30:26 INFO     received a message "disconnectMount"
+2022-04-04 10:30:27 INFO     received a message "end"
+2022-04-04 10:32:12 INFO     Initializing: logging started
+2022-04-04 10:32:12 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-04 10:32:12 INFO     connected to broker
+2022-04-04 10:32:12 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-04 10:32:12 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-04 10:32:19 INFO     received a message "connectMount"
+2022-04-04 10:32:20 INFO     received a message "enableMount"
+2022-04-04 10:32:21 INFO     received a message "homeMount"
+2022-04-04 10:32:22 INFO     received a message "gotoAltAz(45.0, 200.0)"
+2022-04-04 10:32:23 INFO     received a message "gotoAltAz(60.0, 100.0)"
+2022-04-04 10:32:24 INFO     received a message "gotoAltAz(30.0, 300.0)"
+2022-04-04 10:32:25 INFO     received a message "parkMount"
+2022-04-04 10:32:26 INFO     received a message "disableMount"
+2022-04-04 10:32:27 INFO     received a message "disconnectMount"
+2022-04-04 10:32:28 INFO     received a message "end"

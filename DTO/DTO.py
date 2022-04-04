@@ -122,10 +122,16 @@ if __name__ == "__main__":
         cnt = 1
         while line:
             print("Line {}: {}".format(cnt, line.strip()))
+            comm = line.strip()
+            if ":" in comm:
+                targ = comm[0 : comm.find(":")]
+                comm = comm[comm.find(":") + 2 :]
+            else:
+                comm = comm
             dto.conn.send(
-                body=line.strip(),
+                body=comm,
                 destination="/topic/" + dto.config["mount_command_topic"],
             )
-            time.sleep(0.1)
+            time.sleep(1.0)
             line = fp.readline()
             cnt += 1

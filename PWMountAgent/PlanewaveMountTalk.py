@@ -30,19 +30,35 @@ class PlanewaveMountTalk(object):
         s = self.pwi4.mount_disconnect()
 
     def send_command_to_mount(self, mount_command):
-        s = self.pwi4.status()
-        s = self.pwi4.mount_connect()
+        # s = self.pwi4.status()
+        # s = self.pwi4.mount_connect()
         # Strip off everything up to the first parenthesis
-        mcom = mount_command[0 : mount_command.find("(")]
+        if "(" in mount_command:
+            mcom = mount_command[0 : mount_command.find("(")]
+        else:
+            mcom = mount_command
+        # print(mcom)
 
-        if mcom == "mount_enable":
+        if mcom == "enableMount":
             print("Enable the Mount")
 
-        elif mcom == "mount_disable":
+        elif mcom == "disableMount":
             print("Disable the Mount")
 
-        elif mcom == "mount_goto_ra_dec_j2000":
-            print("Mount to RA,DEC, J2000")
+        elif mcom == "connectMount":
+            print("Connect the Mount")
+
+        elif mcom == "disconnectMount":
+            print("Disconnect the Mount")
+
+        elif mcom == "homeMount":
+            print("Home the Mount")
+
+        elif mcom == "parkMount":
+            print("Park the Mount")
+
+        elif mcom == "gotoAltAz":
+            print("Mount to Alt, Az")
 
         else:
             print("Unknown command")
