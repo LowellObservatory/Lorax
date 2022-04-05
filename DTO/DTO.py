@@ -102,7 +102,7 @@ class DTO:
 
         def on_message(self, message):
             topic = message.headers["destination"]
-            if "mount.broadcast" in topic:
+            if self.parent.config["mount_incoming_topic"] in topic:
                 print("message from mount: " + message.body)
             self.parent.dto_logger.info('received a message "%s"' % message.body)
 

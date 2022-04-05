@@ -411,3 +411,26 @@
 2022-04-05 08:59:39 INFO     received a message "Mount Status here"
 2022-04-05 08:59:40 INFO     received a message "Mount Status here"
 2022-04-05 08:59:41 INFO     received a message "Mount Status here"
+2022-04-05 09:09:03 INFO     Initializing: logging started
+2022-04-05 09:09:03 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-05 09:09:03 INFO     connected to broker
+2022-04-05 09:09:03 INFO     subscribing to topic: lorax.timo.mount.broadcast
+2022-04-05 09:09:03 INFO     subscribed to topic lorax.timo.mount.broadcast
+2022-04-05 09:09:03 INFO     subscribing to topic: lorax.timo.camera.broadcast
+2022-04-05 09:09:03 INFO     subscribed to topic lorax.timo.camera.broadcast
+2022-04-05 09:09:35 INFO     Initializing: logging started
+2022-04-05 09:09:35 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-05 09:09:35 INFO     connected to broker
+2022-04-05 09:09:35 INFO     subscribing to topic: lorax.timo.mount.broadcast
+2022-04-05 09:09:35 INFO     subscribed to topic lorax.timo.mount.broadcast
+2022-04-05 09:09:35 INFO     subscribing to topic: lorax.timo.camera.broadcast
+2022-04-05 09:09:35 INFO     subscribed to topic lorax.timo.camera.broadcast
+2022-04-05 09:09:35 INFO     received a message "Mount Status here"
+2022-04-05 09:09:36 INFO     received a message "Mount Status here"
+2022-04-05 09:09:37 INFO     received a message "Mount Status here"
+2022-04-05 09:09:38 INFO     received a message "Mount Status here"
+2022-04-05 09:09:39 INFO     received a message "Mount Status here"
+2022-04-05 09:09:40 INFO     received a message "Mount Status here"
+2022-04-05 09:09:41 INFO     received a message "Mount Status here"
+2022-04-05 09:09:42 INFO     received a message "Mount Status here"
+2022-04-05 09:09:43 INFO     received a message "Mount Status here"
