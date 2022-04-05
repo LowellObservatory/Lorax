@@ -92,13 +92,6 @@ class DTO:
 
         self.command_input_file = self.config["command_input_file"]
 
-    def send_hello(self):
-        self.conn.send(
-            body="Hello World",
-            destination="/topic/" + self.config["mount_incoming_topic"],
-        )
-        time.sleep(2)
-
     class MyListener(stomp.ConnectionListener):
         def __init__(self, parent):
             self.parent = parent
@@ -108,30 +101,45 @@ class DTO:
             print('received an error "%s"' % message)
 
         def on_message(self, message):
-            # print('received a message "%s"' % message)
+            topic = message.headers["destination"]
+            if "mount.broadcast" in topic:
+                print("message from mount: " + message.body)
             self.parent.dto_logger.info('received a message "%s"' % message.body)
 
 
 if __name__ == "__main__":
     dto = DTO()
-    dto.send_hello()
 
-    print(dto.command_input_file)
+    # print(dto.command_input_file)
     with open(dto.command_input_file) as fp:
         line = fp.readline()
         cnt = 1
         while line:
-            print("Line {}: {}".format(cnt, line.strip()))
+            # print("Line {}: {}".format(cnt, line.strip()))
+            # Strip line, parse out target and command.
             comm = line.strip()
-            if ":" in comm:
-                targ = comm[0 : comm.find(":")]
-                comm = comm[comm.find(":") + 2 :]
-            else:
-                comm = comm
-            dto.conn.send(
-                body=comm,
-                destination="/topic/" + dto.config["mount_command_topic"],
-            )
+            targ = comm[0 : comm.find(":")]
+            comm = comm[comm.find(":") + 2 :]
+
+            if "mount" in targ:
+                dto.conn.send(
+                    body=comm,
+                    destination="/topic/" + dto.config["mount_command_topic"],
+                )
+            if "camera" in targ:
+                dto.conn.send(
+                    body=comm,
+                    destination="/topic/" + dto.config["camera_command_topic"],
+                )
+            if "dto" in targ:
+                dto.conn.send(
+                    body=comm,
+                    destination="/topic/" + dto.config["camera_command_topic"],
+                )
+                dto.conn.send(
+                    body=comm,
+                    destination="/topic/" + dto.config["mount_command_topic"],
+                )
             time.sleep(1.0)
             line = fp.readline()
             cnt += 1

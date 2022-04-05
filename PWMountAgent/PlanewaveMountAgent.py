@@ -128,7 +128,12 @@ if __name__ == "__main__":
             else:
                 pwma.planewave_mount_talk.send_command_to_mount(pwma.current_message)
             pwma.message_received = 0
-            time.sleep(0.01)
+            # Send mount status back to DTO.
+            pwma.conn.send(
+                body="Mount Status here",
+                destination="/topic/" + pwma.config["broadcast_topic"],
+            )
+            time.sleep(1.0)
 
 """
 

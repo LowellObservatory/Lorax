@@ -7,4 +7,4 @@ mount: gotoAltAz(30.0, 300.0)
 mount: parkMount
 mount: disableMount
 mount: disconnectMount
-end
+dto  : end
