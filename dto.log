@@ -450,3 +450,35 @@
 2022-04-05 09:14:13 INFO     received a message "Mount Status here"
 2022-04-05 09:14:14 INFO     received a message "Mount Status here"
 2022-04-05 09:14:15 INFO     received a message "Mount Status here"
+2022-04-05 09:39:05 INFO     Initializing: logging started
+2022-04-05 09:39:05 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-05 09:39:05 INFO     connected to broker
+2022-04-05 09:39:05 INFO     subscribing to topic: lorax.timo.mount.broadcast
+2022-04-05 09:39:05 INFO     subscribed to topic lorax.timo.mount.broadcast
+2022-04-05 09:39:05 INFO     subscribing to topic: lorax.timo.camera.broadcast
+2022-04-05 09:39:05 INFO     subscribed to topic lorax.timo.camera.broadcast
+2022-04-05 09:39:06 INFO     received a message "Mount Status here"
+2022-04-05 09:39:07 INFO     received a message "Mount Status here"
+2022-04-05 09:39:08 INFO     received a message "Mount Status here"
+2022-04-05 09:39:11 INFO     received a message "Mount Status here"
+2022-04-05 09:39:13 INFO     received a message "Mount Status here"
+2022-04-05 09:39:15 INFO     received a message "Mount Status here"
+2022-04-05 09:39:18 INFO     received a message "Mount Status here"
+2022-04-05 09:39:19 INFO     received a message "Mount Status here"
+2022-04-05 09:39:20 INFO     received a message "Mount Status here"
+2022-04-05 09:51:25 INFO     Initializing: logging started
+2022-04-05 09:51:25 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-05 09:51:25 INFO     connected to broker
+2022-04-05 09:51:25 INFO     subscribing to topic: lorax.timo.mount.broadcast
+2022-04-05 09:51:25 INFO     subscribed to topic lorax.timo.mount.broadcast
+2022-04-05 09:51:25 INFO     subscribing to topic: lorax.timo.camera.broadcast
+2022-04-05 09:51:25 INFO     subscribed to topic lorax.timo.camera.broadcast
+2022-04-05 09:51:26 INFO     received a message "Mount Status here"
+2022-04-05 09:51:27 INFO     received a message "Mount Status here"
+2022-04-05 09:51:28 INFO     received a message "Mount Status here"
+2022-04-05 09:51:35 INFO     received a message "Mount Status here"
+2022-04-05 09:51:37 INFO     received a message "Mount Status here"
+2022-04-05 09:51:39 INFO     received a message "Mount Status here"
+2022-04-05 09:51:42 INFO     received a message "Mount Status here"
+2022-04-05 09:51:43 INFO     received a message "Mount Status here"
+2022-04-05 09:51:44 INFO     received a message "Mount Status here"

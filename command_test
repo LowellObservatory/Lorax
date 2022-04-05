@@ -1,13 +1,21 @@
-mount  : connectMount
-mount  : enableMount
-mount  : homeMount
-mount  : gotoAltAz(45.0, 200.0)
-camera : expose(20.0)
-mount  : gotoAltAz(60.0, 100.0)
-camera : expose(10.0)
-mount  : gotoAltAz(30.0, 300.0)
-camera : expose(60.0)
-mount  : parkMount
-mount  : disableMount
-mount  : disconnectMount
-dto    : end
+dto     : waituntil("time", 1:30)
+mount   : connectMount
+mount   : enableMount
+mount   : homeMount
+camera  : initialize(arguments)
+camera  : cool(-20)
+dome    : open
+call    : duskflats(arguments)
+dto     : waituntil("sun", -9.0)
+call    : dofocus(filter, binning, repeat)
+mount   : gotoAltAz(45.0, 200.0)
+camera  : expose(filters, binning, exposure)
+mount   : gotoAltAz(60.0, 100.0)
+camera  : expose(filters, binning, exposure)
+mount   : gotoAltAz(30.0, 300.0)
+camera  : expose(filters, binning, exposure)
+dome    : close
+mount   : parkMount
+mount   : disableMount
+mount   : disconnectMount
+allserv : end

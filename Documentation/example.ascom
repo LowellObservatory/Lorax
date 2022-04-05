@@ -1,0 +1,388 @@
+;Script generated on Sat Jan 29 11:22:13 2022
+
+
+;Lowell Observatory PW1000-1
+
+
+;NEED TO GET OBSERVERS Auto: BSkiff
+
+;Turn on ephemeris tracking
+#TRACKON
+
+;Telescope opens at 00:39 UT = 01:43 LST (Sunset at 1.0 deg)
+
+#WAITUNTIL 0, 00:39
+#DOMEOPEN
+
+;Start chiller at 00:41. Allow 10m to cool
+;While chiller cools, manually open mirror covers
+
+#WAITUNTIL 0, 00:41
+#CHILL -20
+#WAITUNTIL 0, 00:51
+
+;Set binning for the night
+
+#BINNING 3
+
+;Do evening flats
+
+#DUSKFLATS
+
+;Do initial focus at UT: 01:31 LST: 02:35 (when Sun at -9 degrees)
+
+#WAITUNTIL 0, -9.0
+#AUTOFOCUS
+
+;Set up the focus with the clear filter
+;Do the focus near the meridian (Az=0 and Alt of 70)
+
+#COUNT 1
+#REPEAT 1
+#POSANG 0.0
+#INTERVAL 1
+#FILTER clear
+#BINNING 3
+FocusPos	02:35:00	+55:00:00
+
+;This should complete at UT: 01:36 LST: 02:40
+;Synchronize at this time
+
+#WAITUNTIL 0, 01:36
+
+;Do object BL Lac at UT: 01:36:51 LST: 02:41
+
+#REPEAT    3
+#COUNT 1
+#FILTER Bessell-V
+#INTERVAL    40
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+BL Lac	22:02:35.0	+42:16:40
+#REPEAT    3
+#COUNT 1
+#FILTER Sloan-r
+#INTERVAL    40
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+BL Lac	22:02:35.0	+42:16:40
+#DITHER 0
+
+;Do object Landolt Tau 1 at UT: 01:43:48 LST: 02:48
+
+#REPEAT    2
+#COUNT 1
+#FILTER Bessell-B
+#INTERVAL     4
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+Landolt Tau 1	04:12:04.0	+27:03:00
+#REPEAT    2
+#COUNT 1
+#FILTER Bessell-V
+#INTERVAL     4
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+Landolt Tau 1	04:12:04.0	+27:03:00
+#REPEAT    2
+#COUNT 1
+#FILTER Bessell-I
+#INTERVAL     4
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+Landolt Tau 1	04:12:04.0	+27:03:00
+#DITHER 0
+
+;Unused period here of  0.02 hours -- synchronize
+
+#WAITUNTIL 0, 01:47
+
+;Do object CTA 102 at UT: 01:48:02 LST: 02:52
+
+#REPEAT    3
+#COUNT 1
+#FILTER Sloan-r
+#INTERVAL    40
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+CTA 102	22:32:37.0	+11:42:30
+#DITHER 0
+
+;Do object PV Cep at UT: 01:51:26 LST: 02:55
+
+#REPEAT    2
+#COUNT 1
+#FILTER Bessell-V
+#INTERVAL   180
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+PV Cep	20:45:53.0	+67:57:30
+#REPEAT    2
+#COUNT 1
+#FILTER Sloan-r
+#INTERVAL   180
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+PV Cep	20:45:53.0	+67:57:30
+#DITHER 0
+
+;Do object 28P Neujmin at UT: 02:05:18 LST: 03:09
+
+#REPEAT    2
+#COUNT 1
+#FILTER Sloan-r
+#INTERVAL   300
+#BINNING  3
+#POSANG 0.0
+CT 0028P
+
+;Do object KH 15D at UT: 02:16:06 LST: 03:20
+
+#REPEAT    5
+#COUNT 1
+#FILTER Bessell-V
+#INTERVAL    30
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+KH 15D	06:41:10.0	+09:28:36
+#REPEAT    5
+#COUNT 1
+#FILTER Bessell-I
+#INTERVAL    30
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+KH 15D	06:41:10.0	+09:28:36
+#DITHER 0
+
+;Do object 28P Neujmin at UT: 02:24:48 LST: 03:29
+
+#REPEAT    2
+#COUNT 1
+#FILTER Sloan-r
+#INTERVAL   300
+#BINNING  3
+#POSANG 0.0
+CT 0028P
+
+;Do object 28P Neujmin at UT: 02:35:17 LST: 03:39
+
+#REPEAT    2
+#COUNT 1
+#FILTER Sloan-r
+#INTERVAL   300
+#BINNING  3
+#POSANG 0.0
+CT 0028P
+
+;Do object GJ 281 at UT: 02:46:08 LST: 03:50
+
+#REPEAT    5
+#COUNT 1
+#FILTER Bessell-V
+#INTERVAL     4
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+GJ 281	07:39:31.5	+02:15:00
+#DITHER 0
+
+;Do object 67P Chu-Ger at UT: 02:48:25 LST: 03:53
+
+#REPEAT    3
+#COUNT 1
+#FILTER Sloan-r
+#INTERVAL    60
+#BINNING  3
+#POSANG 0.0
+CT 0067P
+#REPEAT    3
+#COUNT 1
+#FILTER Bessell-U
+#INTERVAL   300
+#BINNING  3
+#POSANG 0.0
+CT 0067P
+
+;Do object 28P Neujmin at UT: 03:08:32 LST: 04:13
+
+#REPEAT    2
+#COUNT 1
+#FILTER Sloan-r
+#INTERVAL   300
+#BINNING  3
+#POSANG 0.0
+CT 0028P
+
+;Do object 28P Neujmin at UT: 03:19:01 LST: 04:23
+
+#REPEAT    2
+#COUNT 1
+#FILTER Sloan-r
+#INTERVAL   300
+#BINNING  3
+#POSANG 0.0
+CT 0028P
+
+;Do object 28P Neujmin at UT: 03:29:30 LST: 04:34
+
+#REPEAT    2
+#COUNT 1
+#FILTER Sloan-r
+#INTERVAL   300
+#BINNING  3
+#POSANG 0.0
+CT 0028P
+
+;Do a focus at UT: 03:40 LST: 04:44
+
+#WAITUNTIL 0, 03:40
+#AUTOFOCUS
+#COUNT 1
+#REPEAT 1
+#POSANG 0.0
+#INTERVAL 1
+#FILTER clear
+#BINNING 3
+FocusPos	04:44:00	+55:00:00
+
+;Do object 28P Neujmin at UT: 03:46:03 LST: 04:50
+
+#REPEAT    2
+#COUNT 1
+#FILTER Sloan-r
+#INTERVAL   300
+#BINNING  3
+#POSANG 0.0
+CT 0028P
+
+;Do object 28P Neujmin at UT: 03:56:32 LST: 05:01
+
+#REPEAT    2
+#COUNT 1
+#FILTER Sloan-r
+#INTERVAL   300
+#BINNING  3
+#POSANG 0.0
+CT 0028P
+
+;Do object 28P Neujmin at UT: 04:07:00 LST: 05:11
+
+#REPEAT    2
+#COUNT 1
+#FILTER Sloan-r
+#INTERVAL   300
+#BINNING  3
+#POSANG 0.0
+CT 0028P
+
+;Do object NGC 2682 at UT: 04:18:23 LST: 05:23
+
+#REPEAT    2
+#COUNT 1
+#FILTER Bessell-B
+#INTERVAL     4
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+NGC 2682	08:51:24.0	+11:49:30
+#REPEAT    3
+#COUNT 1
+#FILTER Bessell-B
+#INTERVAL    60
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+NGC 2682	08:51:24.0	+11:49:30
+#REPEAT    2
+#COUNT 1
+#FILTER Bessell-V
+#INTERVAL     4
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+NGC 2682	08:51:24.0	+11:49:30
+#REPEAT    3
+#COUNT 1
+#FILTER Bessell-V
+#INTERVAL    40
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+NGC 2682	08:51:24.0	+11:49:30
+#REPEAT    2
+#COUNT 1
+#FILTER Bessell-I
+#INTERVAL     4
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+NGC 2682	08:51:24.0	+11:49:30
+#REPEAT    2
+#COUNT 1
+#FILTER Bessell-I
+#INTERVAL    30
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+NGC 2682	08:51:24.0	+11:49:30
+#DITHER 0
+
+;Do object 28P Neujmin at UT: 04:30:32 LST: 05:35
+
+#REPEAT    2
+#COUNT 1
+#FILTER Sloan-r
+#INTERVAL   300
+#BINNING  3
+#POSANG 0.0
+CT 0028P
+
+;Do object 28P Neujmin at UT: 04:41:00 LST: 05:45
+
+#REPEAT    2
+#COUNT 1
+#FILTER Sloan-r
+#INTERVAL   300
+#BINNING  3
+#POSANG 0.0
+CT 0028P
+
+;Do object 28P Neujmin at UT: 04:51:29 LST: 05:56
+
+#REPEAT    2
+#COUNT 1
+#FILTER Sloan-r
+#INTERVAL   300
+#BINNING  3
+#POSANG 0.0
+CT 0028P
+
+;Do object HD 95650 at UT: 05:02:47 LST: 06:07
+
+#REPEAT    5
+#COUNT 1
+#FILTER Bessell-B
+#INTERVAL     4
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+HD 95650	11:02:16.0	+22:00:00
+#REPEAT    5
+#COUNT 1
+#FILTER Bessell-V
+#INTERVAL     4
+#BINNING  3
+#POSANG 0.0
+#DITHER    20
+HD 95650	11:02:16.0	+22:00:00
+#DITHER 0

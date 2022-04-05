@@ -131,7 +131,7 @@ if __name__ == "__main__":
                     body=comm,
                     destination="/topic/" + dto.config["camera_command_topic"],
                 )
-            if "dto" in targ:
+            if "allserv" in targ:
                 dto.conn.send(
                     body=comm,
                     destination="/topic/" + dto.config["camera_command_topic"],
