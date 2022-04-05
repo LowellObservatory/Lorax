@@ -1,10 +1,13 @@
-mount: connectMount
-mount: enableMount
-mount: homeMount
-mount: gotoAltAz(45.0, 200.0)
-mount: gotoAltAz(60.0, 100.0)
-mount: gotoAltAz(30.0, 300.0)
-mount: parkMount
-mount: disableMount
-mount: disconnectMount
-dto  : end
+mount  : connectMount
+mount  : enableMount
+mount  : homeMount
+mount  : gotoAltAz(45.0, 200.0)
+camera : expose(20.0)
+mount  : gotoAltAz(60.0, 100.0)
+camera : expose(10.0)
+mount  : gotoAltAz(30.0, 300.0)
+camera : expose(60.0)
+mount  : parkMount
+mount  : disableMount
+mount  : disconnectMount
+dto    : end
