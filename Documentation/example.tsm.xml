@@ -1,26 +1,26 @@
 <TSM xsi:noNamespaceSchemaLocation="http://sanaregistry.org/r/ndmxml/ndmxml-1.0-master.xsd" id="ESA_TSM " version="1.0">
     <header>
-        <CREATION_DATE>2014-12-11T11:47:00</CREATION_DATE>
-        <ORIGINATOR>ESA SSA-NEO</ORIGINATOR>
-        <SENSOR_ID>ESA-OGS</SENSOR_ID>
+        <CREATION_DATE>2022-06-11T11:47:00</CREATION_DATE>
+        <ORIGINATOR>Lowell Observatory</ORIGINATOR>
+        <SENSOR_ID>SBIG</SENSOR_ID>
         <MODE>command</MODE>
         <OVERLAPPING_FLAG>false</OVERLAPPING_FLAG>
-        <MESSAGE_ID>NEO Survey Search Region #023002</MESSAGE_ID>
+        <MESSAGE_ID>Alien Spacecraft Search</MESSAGE_ID>
         <STATE>0</STATE>
         <FAIL_COUNT>0</FAIL_COUNT>
     </header>
     <command>
         <camera>
-            <NAME>ESASDC2</NAME>
+            <NAME>SBIG ST-10X</NAME>
         </camera>
         <imageData>
-            <DIRECTORY>data/sd/SSA_NEO/20140131/023002/</DIRECTORY>
+            <DIRECTORY>data/sd/Alien_SS/20220611/023002/</DIRECTORY>
             <NAME> T023002_01150010_x_A</NAME>
             <fitsHeader>
-                <AUTHOR>Detlef Koschny</AUTHOR>
+                <AUTHOR>Doctor Demento</AUTHOR>
                 <OBSCODE>J04</OBSCODE>
                 <OBJECT>search region #023002</OBJECT>
-                <SESSION>20140131-023002</SESSION>
+                <SESSION>20220611-023002</SESSION>
             </fitsHeader>
         </imageData>
         <target>
@@ -37,7 +37,7 @@
             <EXPOSURE_TIME>30</EXPOSURE_TIME>
         </exposure>
         <observation>
-            <DATE_TIME_START>2014-01-31T21:03:19</DATE_TIME_START>
+            <DATE_TIME_START>2022-06-11T21:03:19</DATE_TIME_START>
         </observation>
     </command>
 </TSM>
