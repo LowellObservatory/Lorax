@@ -1,0 +1,105 @@
+2022-04-19 08:38:05 INFO     Initializing: logging started
+2022-04-19 08:38:05 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 08:38:05 INFO     connected to broker
+2022-04-19 08:38:05 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 08:38:05 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 08:41:03 INFO     Initializing: logging started
+2022-04-19 08:41:03 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 08:41:03 INFO     connected to broker
+2022-04-19 08:41:03 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 08:41:03 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 08:46:28 INFO     Initializing: logging started
+2022-04-19 08:46:28 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 08:46:28 INFO     connected to broker
+2022-04-19 08:46:28 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 08:46:28 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 08:52:03 INFO     Initializing: logging started
+2022-04-19 08:52:03 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 08:52:03 INFO     connected to broker
+2022-04-19 08:52:03 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 08:52:03 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 08:52:49 INFO     Initializing: logging started
+2022-04-19 08:52:49 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 08:52:49 INFO     connected to broker
+2022-04-19 08:52:49 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 08:52:49 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 08:54:12 INFO     Initializing: logging started
+2022-04-19 08:54:12 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 08:54:12 INFO     connected to broker
+2022-04-19 08:54:12 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 08:54:12 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 08:55:39 INFO     Initializing: logging started
+2022-04-19 08:55:39 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 08:55:39 INFO     connected to broker
+2022-04-19 08:55:39 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 08:55:39 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 08:56:51 INFO     Initializing: logging started
+2022-04-19 08:56:51 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 08:56:51 INFO     connected to broker
+2022-04-19 08:56:51 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 08:56:51 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 08:57:29 INFO     Initializing: logging started
+2022-04-19 08:57:29 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 08:57:29 INFO     connected to broker
+2022-04-19 08:57:29 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 08:57:29 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 09:01:23 INFO     Initializing: logging started
+2022-04-19 09:01:23 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 09:01:23 INFO     connected to broker
+2022-04-19 09:01:23 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 09:01:23 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 09:03:29 INFO     Initializing: logging started
+2022-04-19 09:03:29 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 09:03:29 INFO     connected to broker
+2022-04-19 09:03:29 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 09:03:29 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 09:06:13 INFO     Initializing: logging started
+2022-04-19 09:06:13 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 09:06:13 INFO     connected to broker
+2022-04-19 09:06:13 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 09:06:13 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 09:06:21 INFO     Initializing: logging started
+2022-04-19 09:06:21 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 09:06:21 INFO     connected to broker
+2022-04-19 09:06:21 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 09:06:21 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 09:07:35 INFO     Initializing: logging started
+2022-04-19 09:07:35 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 09:07:35 INFO     connected to broker
+2022-04-19 09:07:35 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 09:07:35 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 09:07:57 INFO     Initializing: logging started
+2022-04-19 09:07:57 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 09:07:57 INFO     connected to broker
+2022-04-19 09:07:57 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 09:07:57 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 09:12:44 INFO     Initializing: logging started
+2022-04-19 09:12:44 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 09:12:44 INFO     connected to broker
+2022-04-19 09:12:44 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 09:12:44 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 09:16:04 INFO     Initializing: logging started
+2022-04-19 09:16:04 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 09:16:04 INFO     connected to broker
+2022-04-19 09:16:04 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 09:16:04 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 10:09:28 INFO     Initializing: logging started
+2022-04-19 10:09:28 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 10:09:28 INFO     connected to broker
+2022-04-19 10:09:28 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 10:09:28 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 10:10:17 INFO     Initializing: logging started
+2022-04-19 10:10:17 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 10:10:17 INFO     connected to broker
+2022-04-19 10:10:17 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 10:10:17 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 10:11:58 INFO     Initializing: logging started
+2022-04-19 10:11:58 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 10:11:58 INFO     connected to broker
+2022-04-19 10:11:58 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 10:11:58 INFO     subscribed to topic lorax.timo.dto.mount
+2022-04-19 10:14:14 INFO     Initializing: logging started
+2022-04-19 10:14:14 INFO     connecting to broker at ['tanagra', 61613]
+2022-04-19 10:14:14 INFO     connected to broker
+2022-04-19 10:14:14 INFO     subscribing to topic: lorax.timo.dto.mount
+2022-04-19 10:14:14 INFO     subscribed to topic lorax.timo.dto.mount
