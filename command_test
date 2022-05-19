@@ -8,11 +8,11 @@ dome    : open
 call    : duskflats(arguments)
 dto     : waituntil("sun", -9.0)
 call    : dofocus(filter, binning, repeat)
-mount   : gotoAltAz(45.0, 200.0)
+mount   : gotoAltAz(45.6, 200.34)
 camera  : expose(filters, binning, exposure)
-mount   : gotoAltAz(60.0, 100.0)
+mount   : gotoAltAz(48.93, 202.8)
 camera  : expose(filters, binning, exposure)
-mount   : gotoAltAz(30.0, 300.0)
+mount   : gotoAltAz(52.4, 205.09)
 camera  : expose(filters, binning, exposure)
 dome    : close
 mount   : parkMount

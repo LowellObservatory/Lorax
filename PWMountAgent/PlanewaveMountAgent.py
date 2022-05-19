@@ -7,6 +7,7 @@ Created on Feb 3, 2022
 
 import time
 import logging
+from typing_extensions import Self
 import stomp
 import yaml
 import os
@@ -24,6 +25,8 @@ class PlanewaveMountAgent:
     mount_port = 0
     current_message = ""
     message_received = 0
+    mount_status = ""
+    wait_list = ["gotoAltAz", "gotoRaDecJ2000"]
 
     def __init__(self):
 
@@ -90,8 +93,10 @@ class PlanewaveMountAgent:
         self.planewave_mount_talk = PlanewaveMountTalk(
             self, host=self.mount_host, port=self.mount_port
         )
+        print("got here")
+        # print(self.mount_status)
 
-        """ # Connect to the mount.
+        """  # Connect to the mount.
         self.mount_logger.info("connecting to mount")
         self.planewave_mount_talk.connect_to_mount()
 
@@ -123,17 +128,39 @@ if __name__ == "__main__":
 
     while True:
         if pwma.message_received:
+            print(pwma.current_message)
             if pwma.current_message == "end":
                 os._exit(0)
             else:
                 pwma.planewave_mount_talk.send_command_to_mount(pwma.current_message)
+
             pwma.message_received = 0
-            # Send mount status back to DTO.
-            pwma.conn.send(
-                body="Mount Status here",
+            """ pwma.conn.send(
+                body="Wait",
                 destination="/topic/" + pwma.config["broadcast_topic"],
-            )
-            time.sleep(1.0)
+            ) """
+
+            # If command in wait_list, send "Wait" to DTO, check status
+            # until is_slewing is false, then send "Go" to DTO.
+            if any(s in pwma.current_message for s in pwma.wait_list):
+                # print("we are in a wait loop")
+                # Send mount status back to DTO.
+                pwma.conn.send(
+                    body="Wait",
+                    destination="/topic/" + pwma.config["broadcast_topic"],
+                )
+                while True:
+                    pwma.planewave_mount_talk.send_command_to_mount("status")
+                    time.sleep(0.1)
+                    # print("is_slewing: ", pwma.mount_status.mount.is_slewing)
+                    if not pwma.mount_status.mount.is_slewing:
+                        break
+
+                pwma.conn.send(
+                    body="Go",
+                    destination="/topic/" + pwma.config["broadcast_topic"],
+                )
+            # time.sleep(0.1)
 
 """
 

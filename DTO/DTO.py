@@ -18,8 +18,11 @@ class DTO:
     hosts = ""
     log_file = ""
     command_input_file = ""
+    message_from_mount = ""
 
     def __init__(self):
+
+        self.message_from_mount = "Go"
 
         # Read the config file.
         with open("DTO/configure.yaml", "r") as stream:
@@ -104,6 +107,7 @@ class DTO:
             topic = message.headers["destination"]
             if self.parent.config["mount_incoming_topic"] in topic:
                 print("message from mount: " + message.body)
+            self.parent.message_from_mount = message.body
             self.parent.dto_logger.info('received a message "%s"' % message.body)
 
 
@@ -117,6 +121,7 @@ if __name__ == "__main__":
         while line:
             # print("Line {}: {}".format(cnt, line.strip()))
             # Strip line, parse out target and command.
+            # print(line)
             comm = line.strip()
             targ = comm[0 : comm.find(":")]
             comm = comm[comm.find(":") + 2 :]
@@ -140,6 +145,8 @@ if __name__ == "__main__":
                     body=comm,
                     destination="/topic/" + dto.config["mount_command_topic"],
                 )
-            time.sleep(1.0)
+            while dto.message_from_mount != "Go":
+                time.sleep(0.1)
             line = fp.readline()
+            time.sleep(0.2)
             cnt += 1
