@@ -11,6 +11,9 @@ from typing_extensions import Self
 import stomp
 import yaml
 import os
+import xmltodict
+import uuid
+import datetime
 
 from PlanewaveMountTalk import PlanewaveMountTalk
 
@@ -106,6 +109,30 @@ class PlanewaveMountAgent:
         self.mount_logger.info("disconnecting from mount")
         self.planewave_mount_talk.disconnect_from_mount() """
 
+    def get_status_and_broadcast(self):
+        self.planewave_mount_talk.send_command_to_mount("status")
+        time.sleep(0.2)
+        mydict = {
+            "mount_status": {
+                "message_id": uuid.uuid4(),
+                "timestamput": self.mount_status.response.timestamp_utc,
+                "telescope": "TiMo",
+                "device": {"type": "mount", "vendor": "planewave"},
+                "is_slewing": self.mount_status.mount.is_slewing,
+                "is_tracking": self.mount_status.mount.is_tracking,
+                "azimuth": self.mount_status.mount.azimuth_degs,
+                "altitude": self.mount_status.mount.altitude_degs,
+                "RA-J2000": self.mount_status.mount.ra_j2000_hours,
+                "dec-j2000": self.mount_status.mount.dec_j2000_degs,
+                "rotator-angle": self.mount_status.rotator.field_angle_degs,
+            }
+        }
+        xml_format = xmltodict.unparse(mydict, pretty=True)
+        self.conn.send(
+            body=xml_format,
+            destination="/topic/" + pwma.config["broadcast_topic"],
+        )
+
     class MyListener(stomp.ConnectionListener):
         def __init__(self, parent):
             self.parent = parent
@@ -120,7 +147,6 @@ class PlanewaveMountAgent:
             self.parent.mount_logger.info('received a message "%s"' % message.body)
             self.parent.current_message = message.body
             self.parent.message_received = 1
-            # self.parent.planewave_mount_talk.send_command_to_mount(message.body)
 
 
 if __name__ == "__main__":
@@ -147,20 +173,23 @@ if __name__ == "__main__":
                 # Send mount status back to DTO.
                 pwma.conn.send(
                     body="Wait",
-                    destination="/topic/" + pwma.config["broadcast_topic"],
+                    destination="/topic/" + pwma.config["dto_topic"],
                 )
+                # time.sleep(0.5)
                 while True:
-                    pwma.planewave_mount_talk.send_command_to_mount("status")
-                    time.sleep(0.1)
+                    pwma.get_status_and_broadcast()
                     # print("is_slewing: ", pwma.mount_status.mount.is_slewing)
                     if not pwma.mount_status.mount.is_slewing:
                         break
 
                 pwma.conn.send(
                     body="Go",
-                    destination="/topic/" + pwma.config["broadcast_topic"],
+                    destination="/topic/" + pwma.config["dto_topic"],
                 )
+                # time.sleep(0.5)
             # time.sleep(0.1)
+        else:
+            pwma.get_status_and_broadcast()
 
 """
 

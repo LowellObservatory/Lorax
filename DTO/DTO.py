@@ -63,23 +63,19 @@ class DTO:
             self.dto_logger.error("Connection to broker failed")
 
         self.dto_logger.info("connected to broker")
-        self.dto_logger.info(
-            "subscribing to topic: " + self.config["mount_incoming_topic"]
-        )
+        self.dto_logger.info("subscribing to topic: " + self.config["mount_dto_topic"])
 
-        # Subscribe to messages from "mount_incoming_topic"
-        # and "camera_incoming_topic".
+        # Subscribe to messages from "mount_dto_topic"
+        # and "camera_dto_topic".
         self.conn.subscribe(
             id=1,
-            destination="/topic/" + self.config["mount_incoming_topic"],
+            destination="/topic/" + self.config["mount_dto_topic"],
             headers={},
         )
 
-        self.dto_logger.info(
-            "subscribed to topic " + self.config["mount_incoming_topic"]
-        )
+        self.dto_logger.info("subscribed to topic " + self.config["mount_dto_topic"])
 
-        self.dto_logger.info(
+        """     self.dto_logger.info(
             "subscribing to topic: " + self.config["camera_incoming_topic"]
         )
 
@@ -91,7 +87,7 @@ class DTO:
 
         self.dto_logger.info(
             "subscribed to topic " + self.config["camera_incoming_topic"]
-        )
+        ) """
 
         self.command_input_file = self.config["command_input_file"]
 
@@ -105,10 +101,10 @@ class DTO:
 
         def on_message(self, message):
             topic = message.headers["destination"]
-            if self.parent.config["mount_incoming_topic"] in topic:
+            if self.parent.config["mount_dto_topic"] in topic:
                 print("message from mount: " + message.body)
-            self.parent.message_from_mount = message.body
-            self.parent.dto_logger.info('received a message "%s"' % message.body)
+                self.parent.message_from_mount = message.body
+            # self.parent.dto_logger.info('received a message "%s"' % message.body)
 
 
 if __name__ == "__main__":
@@ -148,5 +144,5 @@ if __name__ == "__main__":
             while dto.message_from_mount != "Go":
                 time.sleep(0.1)
             line = fp.readline()
-            time.sleep(0.2)
+            time.sleep(1.0)
             cnt += 1

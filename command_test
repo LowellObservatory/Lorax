@@ -10,9 +10,9 @@ dto     : waituntil("sun", -9.0)
 call    : dofocus(filter, binning, repeat)
 mount   : gotoAltAz(45.6, 200.34)
 camera  : expose(filters, binning, exposure)
-mount   : gotoAltAz(48.93, 202.8)
+mount   : gotoAltAz(55.93, 225.8)
 camera  : expose(filters, binning, exposure)
-mount   : gotoAltAz(52.4, 205.09)
+mount   : gotoAltAz(65.4, 275.09)
 camera  : expose(filters, binning, exposure)
 dome    : close
 mount   : parkMount

@@ -4,7 +4,7 @@ broker_hosts:
   - tanagra
   - 61613
 mount_command_topic: lorax.timo.dto.mount
-mount_incoming_topic: lorax.timo.mount.broadcast
+mount_dto_topic: lorax.timo.mount.dto
 camera_command_topic: lorax.timo.dto.camera
 camera_incoming_topic: lorax.timo.camera.broadcast
 mount_type: PWI4

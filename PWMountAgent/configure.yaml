@@ -2,6 +2,7 @@
 log_file: "pw_mount.log"
 broker_hosts: ["tanagra", 61613]
 incoming_topic: "lorax.timo.dto.mount"
+dto_topic: "lorax.timo.mount.dto"
 broadcast_topic: "lorax.timo.mount.broadcast"
 mount_type: "PWI4"
 mount_host: "localhost"
