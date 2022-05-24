@@ -29,7 +29,7 @@ class PlanewaveMountAgent:
     current_message = ""
     message_received = 0
     mount_status = ""
-    wait_list = ["gotoAltAz", "gotoRaDecJ2000"]
+    wait_list = ["gotoAltAz", "gotoRaDecJ2000", "homeMount", "parkMount"]
 
     def __init__(self):
 
@@ -165,6 +165,17 @@ if __name__ == "__main__":
                 body="Wait",
                 destination="/topic/" + pwma.config["broadcast_topic"],
             ) """
+
+            if "camera" in pwma.current_message:
+                pwma.conn.send(
+                    body="Wait",
+                    destination="/topic/" + pwma.config["dto_topic"],
+                )
+                time.sleep(2.0)
+                pwma.conn.send(
+                    body="Go",
+                    destination="/topic/" + pwma.config["dto_topic"],
+                )
 
             # If command in wait_list, send "Wait" to DTO, check status
             # until is_slewing is false, then send "Go" to DTO.

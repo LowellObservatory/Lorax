@@ -78,6 +78,8 @@ class PlanewaveMountTalk(object):
 
         if mcom == "enableMount":
             print("Enable the Mount")
+            self.parent.mount_status = self.pwi4.mount_enable(0)
+            self.parent.mount_status = self.pwi4.mount_enable(1)
 
         elif mcom == "disableMount":
             print("Disable the Mount")
@@ -104,9 +106,11 @@ class PlanewaveMountTalk(object):
 
         elif mcom == "homeMount":
             print("Home the Mount")
+            self.parent.mount_status = self.pwi4.mount_find_home()
 
         elif mcom == "parkMount":
             print("Park the Mount")
+            self.parent.mount_status = self.pwi4.mount_park()
 
         elif mcom == "status":
             # print("doing status")

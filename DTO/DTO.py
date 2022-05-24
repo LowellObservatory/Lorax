@@ -141,6 +141,7 @@ if __name__ == "__main__":
                     body=comm,
                     destination="/topic/" + dto.config["mount_command_topic"],
                 )
+            time.sleep(1.0)
             while dto.message_from_mount != "Go":
                 time.sleep(0.1)
             line = fp.readline()
