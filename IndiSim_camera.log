@@ -1,0 +1,610 @@
+2022-06-30 09:51:22 INFO     Initializing: logging started
+2022-06-30 09:51:22 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 09:51:22 INFO     connected to broker
+2022-06-30 09:51:22 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 09:51:22 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 09:55:16 INFO     Initializing: logging started
+2022-06-30 09:55:16 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 09:55:16 INFO     connected to broker
+2022-06-30 09:55:16 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 09:55:16 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 09:56:37 INFO     Initializing: logging started
+2022-06-30 09:56:37 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 09:56:37 INFO     connected to broker
+2022-06-30 09:56:37 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 09:56:37 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 09:57:34 INFO     Initializing: logging started
+2022-06-30 09:57:34 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 09:57:34 INFO     connected to broker
+2022-06-30 09:57:34 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 09:57:34 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 10:23:51 INFO     Initializing: logging started
+2022-06-30 10:23:51 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 10:23:51 INFO     connected to broker
+2022-06-30 10:23:51 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 10:23:51 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 10:28:06 INFO     Initializing: logging started
+2022-06-30 10:28:06 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 10:28:06 INFO     connected to broker
+2022-06-30 10:28:06 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 10:28:06 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 10:36:11 INFO     Initializing: logging started
+2022-06-30 10:36:11 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 10:36:11 INFO     connected to broker
+2022-06-30 10:36:11 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 10:36:11 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 10:36:31 INFO     Initializing: logging started
+2022-06-30 10:36:31 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 10:36:31 INFO     connected to broker
+2022-06-30 10:36:31 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 10:36:31 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 10:38:49 INFO     Initializing: logging started
+2022-06-30 10:38:49 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 10:38:49 INFO     connected to broker
+2022-06-30 10:38:49 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 10:38:49 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 10:42:54 INFO     Initializing: logging started
+2022-06-30 10:42:54 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 10:42:54 INFO     connected to broker
+2022-06-30 10:42:54 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 10:42:54 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 10:43:40 INFO     Initializing: logging started
+2022-06-30 10:43:40 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 10:43:40 INFO     connected to broker
+2022-06-30 10:43:40 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 10:43:40 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 10:45:02 INFO     Initializing: logging started
+2022-06-30 10:45:02 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 10:45:02 INFO     connected to broker
+2022-06-30 10:45:02 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 10:45:02 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 10:59:39 INFO     Initializing: logging started
+2022-06-30 10:59:39 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 10:59:39 INFO     connected to broker
+2022-06-30 10:59:39 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 10:59:39 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 11:00:41 INFO     Initializing: logging started
+2022-06-30 11:00:41 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 11:00:41 INFO     connected to broker
+2022-06-30 11:00:41 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 11:00:41 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 11:03:11 INFO     Initializing: logging started
+2022-06-30 11:03:11 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 11:03:11 INFO     connected to broker
+2022-06-30 11:03:11 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 11:03:11 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 11:05:43 INFO     Initializing: logging started
+2022-06-30 11:05:43 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 11:05:43 INFO     connected to broker
+2022-06-30 11:05:43 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 11:05:43 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 11:06:15 INFO     Initializing: logging started
+2022-06-30 11:06:15 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 11:06:15 INFO     connected to broker
+2022-06-30 11:06:15 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 11:06:15 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 11:06:39 INFO     Initializing: logging started
+2022-06-30 11:06:39 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 11:06:39 INFO     connected to broker
+2022-06-30 11:06:39 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 11:06:39 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 11:09:05 INFO     Initializing: logging started
+2022-06-30 11:09:05 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 11:09:05 INFO     connected to broker
+2022-06-30 11:09:05 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 11:09:05 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 11:11:16 INFO     Initializing: logging started
+2022-06-30 11:11:16 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 11:11:16 INFO     connected to broker
+2022-06-30 11:11:16 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 11:11:16 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 11:15:55 INFO     Initializing: logging started
+2022-06-30 11:15:55 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 11:15:55 INFO     connected to broker
+2022-06-30 11:15:55 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 11:15:55 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 11:16:54 INFO     Initializing: logging started
+2022-06-30 11:16:54 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 11:16:54 INFO     connected to broker
+2022-06-30 11:16:54 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 11:16:54 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 11:18:23 INFO     Initializing: logging started
+2022-06-30 11:18:23 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 11:18:23 INFO     connected to broker
+2022-06-30 11:18:23 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 11:18:23 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 11:18:49 INFO     Initializing: logging started
+2022-06-30 11:18:49 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 11:18:49 INFO     connected to broker
+2022-06-30 11:18:49 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 11:18:49 INFO     subscribed to topic lorax.timo.dto.camera
+2022-06-30 11:20:09 INFO     Initializing: logging started
+2022-06-30 11:20:09 INFO     connecting to broker at ['tanagra', 61613]
+2022-06-30 11:20:10 INFO     connected to broker
+2022-06-30 11:20:10 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-06-30 11:20:10 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 08:28:58 INFO     Initializing: logging started
+2022-07-01 08:28:58 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 08:28:58 INFO     connected to broker
+2022-07-01 08:28:58 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 08:28:58 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 08:30:42 INFO     Initializing: logging started
+2022-07-01 08:30:42 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 08:30:42 INFO     connected to broker
+2022-07-01 08:30:42 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 08:30:42 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 08:39:17 INFO     Initializing: logging started
+2022-07-01 08:39:17 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 08:39:17 INFO     connected to broker
+2022-07-01 08:39:17 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 08:39:17 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 08:40:18 INFO     Initializing: logging started
+2022-07-01 08:40:18 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 08:40:18 INFO     connected to broker
+2022-07-01 08:40:18 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 08:40:18 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 08:41:10 INFO     Initializing: logging started
+2022-07-01 08:41:10 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 08:41:10 INFO     connected to broker
+2022-07-01 08:41:10 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 08:41:10 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 08:43:01 INFO     Initializing: logging started
+2022-07-01 08:43:01 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 08:43:01 INFO     connected to broker
+2022-07-01 08:43:01 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 08:43:01 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 08:43:39 INFO     Initializing: logging started
+2022-07-01 08:43:39 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 08:43:39 INFO     connected to broker
+2022-07-01 08:43:39 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 08:43:39 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 08:48:30 INFO     Initializing: logging started
+2022-07-01 08:48:30 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 08:48:30 INFO     connected to broker
+2022-07-01 08:48:30 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 08:48:30 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 08:49:35 INFO     Initializing: logging started
+2022-07-01 08:49:35 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 08:49:35 INFO     connected to broker
+2022-07-01 08:49:35 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 08:49:35 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 08:50:48 INFO     Initializing: logging started
+2022-07-01 08:50:48 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 08:50:48 INFO     connected to broker
+2022-07-01 08:50:48 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 08:50:48 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 08:58:55 INFO     Initializing: logging started
+2022-07-01 08:58:55 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 08:58:55 INFO     connected to broker
+2022-07-01 08:58:55 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 08:58:55 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 08:59:32 INFO     Initializing: logging started
+2022-07-01 08:59:32 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 08:59:32 INFO     connected to broker
+2022-07-01 08:59:32 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 08:59:32 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:02:29 INFO     Initializing: logging started
+2022-07-01 09:02:29 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:02:29 INFO     connected to broker
+2022-07-01 09:02:29 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:02:29 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:05:06 INFO     Initializing: logging started
+2022-07-01 09:05:06 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:05:06 INFO     connected to broker
+2022-07-01 09:05:06 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:05:06 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:06:29 INFO     Initializing: logging started
+2022-07-01 09:06:29 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:06:29 INFO     connected to broker
+2022-07-01 09:06:29 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:06:29 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:06:54 INFO     Initializing: logging started
+2022-07-01 09:06:54 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:06:54 INFO     connected to broker
+2022-07-01 09:06:54 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:06:54 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:08:01 INFO     Initializing: logging started
+2022-07-01 09:08:01 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:08:01 INFO     connected to broker
+2022-07-01 09:08:01 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:08:01 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:10:05 INFO     Initializing: logging started
+2022-07-01 09:10:05 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:10:05 INFO     connected to broker
+2022-07-01 09:10:05 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:10:05 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:10:39 INFO     Initializing: logging started
+2022-07-01 09:10:39 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:10:39 INFO     connected to broker
+2022-07-01 09:10:39 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:10:39 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:11:09 INFO     Initializing: logging started
+2022-07-01 09:11:09 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:11:09 INFO     connected to broker
+2022-07-01 09:11:09 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:11:09 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:11:38 INFO     Initializing: logging started
+2022-07-01 09:11:38 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:11:38 INFO     connected to broker
+2022-07-01 09:11:38 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:11:38 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:12:07 INFO     Initializing: logging started
+2022-07-01 09:12:07 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:12:07 INFO     connected to broker
+2022-07-01 09:12:07 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:12:07 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:19:37 INFO     Initializing: logging started
+2022-07-01 09:19:37 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:19:37 INFO     connected to broker
+2022-07-01 09:19:37 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:19:37 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:20:04 INFO     Initializing: logging started
+2022-07-01 09:20:04 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:20:04 INFO     connected to broker
+2022-07-01 09:20:04 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:20:04 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:20:46 INFO     Initializing: logging started
+2022-07-01 09:20:46 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:20:46 INFO     connected to broker
+2022-07-01 09:20:46 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:20:46 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:21:14 INFO     Initializing: logging started
+2022-07-01 09:21:14 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:21:14 INFO     connected to broker
+2022-07-01 09:21:14 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:21:14 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:21:55 INFO     Initializing: logging started
+2022-07-01 09:21:55 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:21:55 INFO     connected to broker
+2022-07-01 09:21:55 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:21:55 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:22:34 INFO     Initializing: logging started
+2022-07-01 09:22:34 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:22:34 INFO     connected to broker
+2022-07-01 09:22:34 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:22:34 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:23:07 INFO     Initializing: logging started
+2022-07-01 09:23:07 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:23:07 INFO     connected to broker
+2022-07-01 09:23:07 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:23:07 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:25:19 INFO     Initializing: logging started
+2022-07-01 09:25:19 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:25:19 INFO     connected to broker
+2022-07-01 09:25:19 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:25:19 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:26:43 INFO     Initializing: logging started
+2022-07-01 09:26:43 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:26:43 INFO     connected to broker
+2022-07-01 09:26:43 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:26:43 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:27:33 INFO     Initializing: logging started
+2022-07-01 09:27:33 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:27:33 INFO     connected to broker
+2022-07-01 09:27:33 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:27:33 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:28:09 INFO     Initializing: logging started
+2022-07-01 09:28:09 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:28:09 INFO     connected to broker
+2022-07-01 09:28:09 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:28:09 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:28:41 INFO     Initializing: logging started
+2022-07-01 09:28:41 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:28:41 INFO     connected to broker
+2022-07-01 09:28:41 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:28:41 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:29:14 INFO     Initializing: logging started
+2022-07-01 09:29:14 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:29:14 INFO     connected to broker
+2022-07-01 09:29:14 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:29:14 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 09:52:05 INFO     Initializing: logging started
+2022-07-01 09:52:05 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 09:52:05 INFO     connected to broker
+2022-07-01 09:52:05 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 09:52:05 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:01:19 INFO     Initializing: logging started
+2022-07-01 10:01:19 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:01:19 INFO     connected to broker
+2022-07-01 10:01:19 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:01:19 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:01:57 INFO     Initializing: logging started
+2022-07-01 10:01:57 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:01:57 INFO     connected to broker
+2022-07-01 10:01:57 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:01:57 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:04:01 INFO     Initializing: logging started
+2022-07-01 10:04:01 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:04:01 INFO     connected to broker
+2022-07-01 10:04:01 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:04:01 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:04:22 INFO     Initializing: logging started
+2022-07-01 10:04:22 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:04:22 INFO     connected to broker
+2022-07-01 10:04:22 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:04:22 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:05:38 INFO     Initializing: logging started
+2022-07-01 10:05:38 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:05:38 INFO     connected to broker
+2022-07-01 10:05:38 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:05:38 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:08:16 INFO     Initializing: logging started
+2022-07-01 10:08:16 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:08:16 INFO     connected to broker
+2022-07-01 10:08:16 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:08:16 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:10:16 INFO     Initializing: logging started
+2022-07-01 10:10:16 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:10:16 INFO     connected to broker
+2022-07-01 10:10:16 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:10:16 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:12:59 INFO     Initializing: logging started
+2022-07-01 10:12:59 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:12:59 INFO     connected to broker
+2022-07-01 10:12:59 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:12:59 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:14:24 INFO     Initializing: logging started
+2022-07-01 10:14:24 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:14:24 INFO     connected to broker
+2022-07-01 10:14:24 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:14:24 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:15:07 INFO     Initializing: logging started
+2022-07-01 10:15:07 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:15:07 INFO     connected to broker
+2022-07-01 10:15:07 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:15:07 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:16:48 INFO     Initializing: logging started
+2022-07-01 10:16:48 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:16:48 INFO     connected to broker
+2022-07-01 10:16:48 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:16:48 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:17:27 INFO     Initializing: logging started
+2022-07-01 10:17:27 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:17:27 INFO     connected to broker
+2022-07-01 10:17:27 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:17:27 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:17:51 INFO     Initializing: logging started
+2022-07-01 10:17:51 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:17:51 INFO     connected to broker
+2022-07-01 10:17:51 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:17:51 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:19:45 INFO     Initializing: logging started
+2022-07-01 10:19:45 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:19:45 INFO     connected to broker
+2022-07-01 10:19:45 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:19:45 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:21:00 INFO     Initializing: logging started
+2022-07-01 10:21:00 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:21:00 INFO     connected to broker
+2022-07-01 10:21:00 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:21:00 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:22:21 INFO     Initializing: logging started
+2022-07-01 10:22:21 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:22:21 INFO     connected to broker
+2022-07-01 10:22:21 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:22:21 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:24:31 INFO     Initializing: logging started
+2022-07-01 10:24:31 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:24:31 INFO     connected to broker
+2022-07-01 10:24:31 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:24:31 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:26:25 INFO     Initializing: logging started
+2022-07-01 10:26:25 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:26:25 INFO     connected to broker
+2022-07-01 10:26:25 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:26:25 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:27:19 INFO     Initializing: logging started
+2022-07-01 10:27:19 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:27:19 INFO     connected to broker
+2022-07-01 10:27:19 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:27:19 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:31:32 INFO     Initializing: logging started
+2022-07-01 10:31:32 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:31:32 INFO     connected to broker
+2022-07-01 10:31:32 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:31:32 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:32:12 INFO     Initializing: logging started
+2022-07-01 10:32:12 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:32:12 INFO     connected to broker
+2022-07-01 10:32:12 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:32:12 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:33:01 INFO     Initializing: logging started
+2022-07-01 10:33:01 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:33:01 INFO     connected to broker
+2022-07-01 10:33:01 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:33:01 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:33:44 INFO     Initializing: logging started
+2022-07-01 10:33:44 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:33:44 INFO     connected to broker
+2022-07-01 10:33:44 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:33:44 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:34:10 INFO     Initializing: logging started
+2022-07-01 10:34:10 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:34:10 INFO     connected to broker
+2022-07-01 10:34:10 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:34:10 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:35:47 INFO     Initializing: logging started
+2022-07-01 10:35:47 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:35:47 INFO     connected to broker
+2022-07-01 10:35:47 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:35:47 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:36:40 INFO     Initializing: logging started
+2022-07-01 10:36:40 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:36:40 INFO     connected to broker
+2022-07-01 10:36:40 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:36:40 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:38:46 INFO     Initializing: logging started
+2022-07-01 10:38:46 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:38:46 INFO     connected to broker
+2022-07-01 10:38:46 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:38:46 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:41:14 INFO     Initializing: logging started
+2022-07-01 10:41:14 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:41:14 INFO     connected to broker
+2022-07-01 10:41:14 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:41:14 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:41:36 INFO     Initializing: logging started
+2022-07-01 10:41:36 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:41:36 INFO     connected to broker
+2022-07-01 10:41:36 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:41:36 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:42:48 INFO     Initializing: logging started
+2022-07-01 10:42:48 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:42:48 INFO     connected to broker
+2022-07-01 10:42:48 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:42:48 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:44:28 INFO     Initializing: logging started
+2022-07-01 10:44:28 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:44:28 INFO     connected to broker
+2022-07-01 10:44:28 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:44:28 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:45:53 INFO     Initializing: logging started
+2022-07-01 10:45:53 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:45:53 INFO     connected to broker
+2022-07-01 10:45:53 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:45:53 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:46:22 INFO     Initializing: logging started
+2022-07-01 10:46:22 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:46:22 INFO     connected to broker
+2022-07-01 10:46:22 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:46:22 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:47:01 INFO     Initializing: logging started
+2022-07-01 10:47:01 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:47:01 INFO     connected to broker
+2022-07-01 10:47:01 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:47:01 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:48:19 INFO     Initializing: logging started
+2022-07-01 10:48:19 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:48:19 INFO     connected to broker
+2022-07-01 10:48:19 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:48:19 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:50:04 INFO     Initializing: logging started
+2022-07-01 10:50:04 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:50:04 INFO     connected to broker
+2022-07-01 10:50:04 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:50:04 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-01 10:50:48 INFO     Initializing: logging started
+2022-07-01 10:50:48 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-01 10:50:48 INFO     connected to broker
+2022-07-01 10:50:48 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-01 10:50:48 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 08:25:48 INFO     Initializing: logging started
+2022-07-05 08:25:48 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 08:25:48 INFO     connected to broker
+2022-07-05 08:25:48 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 08:25:48 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 08:31:14 INFO     Initializing: logging started
+2022-07-05 08:31:14 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 08:31:14 INFO     connected to broker
+2022-07-05 08:31:14 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 08:31:14 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 08:35:46 INFO     Initializing: logging started
+2022-07-05 08:35:46 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 08:35:46 INFO     connected to broker
+2022-07-05 08:35:46 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 08:35:46 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 08:55:29 INFO     Initializing: logging started
+2022-07-05 08:55:29 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 08:55:29 INFO     connected to broker
+2022-07-05 08:55:29 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 08:55:29 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 08:56:30 INFO     Initializing: logging started
+2022-07-05 08:56:30 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 08:56:30 INFO     connected to broker
+2022-07-05 08:56:30 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 08:56:30 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 08:57:21 INFO     Initializing: logging started
+2022-07-05 08:57:21 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 08:57:21 INFO     connected to broker
+2022-07-05 08:57:21 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 08:57:21 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 08:59:17 INFO     Initializing: logging started
+2022-07-05 08:59:17 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 08:59:17 INFO     connected to broker
+2022-07-05 08:59:17 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 08:59:17 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 09:01:28 INFO     Initializing: logging started
+2022-07-05 09:01:28 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 09:01:28 INFO     connected to broker
+2022-07-05 09:01:28 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 09:01:28 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 09:02:13 INFO     Initializing: logging started
+2022-07-05 09:02:13 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 09:02:13 INFO     connected to broker
+2022-07-05 09:02:13 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 09:02:13 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 09:10:32 INFO     Initializing: logging started
+2022-07-05 09:10:32 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 09:10:32 INFO     connected to broker
+2022-07-05 09:10:32 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 09:10:32 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 09:12:16 INFO     Initializing: logging started
+2022-07-05 09:12:16 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 09:12:16 INFO     connected to broker
+2022-07-05 09:12:16 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 09:12:16 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 09:15:45 INFO     Initializing: logging started
+2022-07-05 09:15:45 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 09:15:45 INFO     connected to broker
+2022-07-05 09:15:45 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 09:15:45 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 09:21:19 INFO     Initializing: logging started
+2022-07-05 09:21:19 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 09:21:19 INFO     connected to broker
+2022-07-05 09:21:19 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 09:21:19 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 09:37:51 INFO     Initializing: logging started
+2022-07-05 09:37:51 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 09:37:51 INFO     connected to broker
+2022-07-05 09:37:51 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 09:37:51 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 09:39:56 INFO     Initializing: logging started
+2022-07-05 09:39:56 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 09:39:56 INFO     connected to broker
+2022-07-05 09:39:56 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 09:39:56 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 09:41:09 INFO     Initializing: logging started
+2022-07-05 09:41:09 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 09:41:09 INFO     connected to broker
+2022-07-05 09:41:09 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 09:41:09 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 09:42:43 INFO     Initializing: logging started
+2022-07-05 09:42:43 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 09:42:43 INFO     connected to broker
+2022-07-05 09:42:43 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 09:42:43 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 09:45:29 INFO     Initializing: logging started
+2022-07-05 09:45:29 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 09:45:29 INFO     connected to broker
+2022-07-05 09:45:29 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 09:45:29 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 09:47:23 INFO     Initializing: logging started
+2022-07-05 09:47:23 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 09:47:23 INFO     connected to broker
+2022-07-05 09:47:23 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 09:47:23 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 09:50:38 INFO     Initializing: logging started
+2022-07-05 09:50:38 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 09:50:38 INFO     connected to broker
+2022-07-05 09:50:38 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 09:50:38 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 09:53:04 INFO     Initializing: logging started
+2022-07-05 09:53:04 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 09:53:04 INFO     connected to broker
+2022-07-05 09:53:04 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 09:53:04 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 09:55:50 INFO     Initializing: logging started
+2022-07-05 09:55:50 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 09:55:50 INFO     connected to broker
+2022-07-05 09:55:50 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 09:55:50 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 09:56:21 INFO     Initializing: logging started
+2022-07-05 09:56:21 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 09:56:21 INFO     connected to broker
+2022-07-05 09:56:21 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 09:56:21 INFO     subscribed to topic lorax.timo.dto.camera
+2022-07-05 10:01:26 INFO     Initializing: logging started
+2022-07-05 10:01:26 INFO     connecting to broker at ['tanagra', 61613]
+2022-07-05 10:01:26 INFO     connected to broker
+2022-07-05 10:01:26 INFO     subscribing to topic: lorax.timo.dto.camera
+2022-07-05 10:01:26 INFO     subscribed to topic lorax.timo.dto.camera

@@ -1,0 +1,11 @@
+---
+broadcast_topic: lorax.timo.camera.broadcast
+broker_hosts:
+  - tanagra
+  - 61613
+camera_host: morgan.lowell.edu
+camera_port: 7624
+camera_type: INDI CCD Simulator
+dto_topic: lorax.timo.camera.dto
+incoming_topic: lorax.timo.dto.camera
+log_file: IndiSim_camera.log
