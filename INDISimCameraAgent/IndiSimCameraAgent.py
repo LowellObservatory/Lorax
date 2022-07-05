@@ -28,11 +28,12 @@ class IndiSimCameraAgent:
     camera_port = 0
     current_message = ""
     message_received = 0
-    camera_status = ""
+    camera_status = {}
     wait_list = ["expose", "changefilter"]
 
     def __init__(self):
 
+        self.camera_status = {}
         # Read the config file.
         with open("INDISimCameraAgent/configure.yaml", "r") as stream:
             try:
@@ -112,10 +113,12 @@ class IndiSimCameraAgent:
         self.planewave_mount_talk.disconnect_from_mount() """
 
     def get_status_and_broadcast(self):
+        print(self.camera_status)
         self.indisim_camera_talk.send_command_to_camera("status")
         time.sleep(0.2)
-        for key, value in self.camera_status.items():
-            print(key, " : ", value)
+        print(self.camera_status)
+        # for key, value in self.camera_status.items():
+        #     print(key, " : ", value)
         """ mydict = {
             "camera_status": {
                 "message_id": uuid.uuid4(),
@@ -156,8 +159,8 @@ class IndiSimCameraAgent:
 if __name__ == "__main__":
     isca = IndiSimCameraAgent()
 
-    """ while True:
-        if isca.message_received:
+    while True:
+        """if isca.message_received:
             print(isca.current_message)
             if isca.current_message == "end":
                 os._exit(0)
@@ -203,11 +206,10 @@ if __name__ == "__main__":
                 )
                 # time.sleep(0.5)
             # time.sleep(0.1)
-        else:
+        else:"""
         time.sleep(0.5)
         isca.get_status_and_broadcast()
         time.sleep(0.5)
-        pass """
 
 
 # Request status from Mount, broadcast to broker

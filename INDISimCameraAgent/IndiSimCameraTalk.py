@@ -11,13 +11,12 @@ import time
 import os
 import numpy as np
 
-status = {}
-
 
 class IndiClient(PyIndi.BaseClient):
     def __init__(self, parent):
         super(IndiClient, self).__init__()
         self.parent = parent
+        status = {}
 
     def newDevice(self, d):
         # print("Receiving Device... " + d.getDeviceName())
@@ -26,8 +25,8 @@ class IndiClient(PyIndi.BaseClient):
 
     def newProperty(self, p):
         # print(dir(p))
-        print("new property " + p.getName() + " for device " + p.getDeviceName())
-        print("type = " + str(p.getType()))
+        # print("new property " + p.getName() + " for device " + p.getDeviceName())
+        # print("type = " + str(p.getType()))
         # Go store the property in the appropriate status dictionary.
         prop_name = p.getName()
         if "CCD" in prop_name or "FILTER" in prop_name:
@@ -72,7 +71,7 @@ class IndiClient(PyIndi.BaseClient):
             temp = prop.getNumber()
             prop_dict = {"prop_type": prop_type}
             prop_dict["value"] = temp[0].value
-            status[prop_name] = prop_dict
+            self.parent.camera_status[prop_name] = prop_dict
         elif prop_type == 1:
             # Switch type
             temp = prop.getSwitch()
@@ -84,7 +83,7 @@ class IndiClient(PyIndi.BaseClient):
                 prop_vals.append((val.name, val.s))
                 # print(val.name)
             prop_dict["vals"] = prop_vals
-            status[prop_name] = prop_dict
+            self.parent.camera_status[prop_name] = prop_dict
         elif prop_type == 2:
             # Text type
             temp = prop.getText()
@@ -98,7 +97,7 @@ class IndiClient(PyIndi.BaseClient):
                 prop_vals.append((val.name, val.text))
             # print(val.name)
             prop_dict["vals"] = prop_vals
-            status[prop_name] = prop_dict
+            self.parent.camera_status[prop_name] = prop_dict
             # print(status[prop_name])
         elif prop_type == 3:
             # Light type
@@ -109,10 +108,10 @@ class IndiClient(PyIndi.BaseClient):
             for val in temp:
                 prop_vals.append((val.name, val.text))
             prop_dict["vals"] = prop_vals
-            status[prop_name] = prop_dict
+            self.parent.camera_status[prop_name] = prop_dict
 
-        print(status)
-        print("       ")
+        # print(status)
+        # print("       ")
 
 
 class IndiSimCameraTalk:
@@ -123,11 +122,10 @@ class IndiSimCameraTalk:
     def __init__(self, parent, host, port):
 
         self.parent = parent
-        self.camera = None
-        self.camera_status = ""
 
         self.indiclient = IndiClient(self)
         self.indiclient.setServer(host, port)
+        self.camera_status = {}
 
         self.indiclient.connectServer()
 
@@ -139,8 +137,8 @@ class IndiSimCameraTalk:
 
         self.device_ccd = device_ccd
 
-        temp = device_ccd.getNumber("CCD_TEMPERATURE")
-        print("temp = " + str(temp[0].value))
+        # temp = device_ccd.getNumber("CCD_TEMPERATURE")
+        # print("temp = " + str(temp[0].value))
 
         """ print("setting temp to -10")
         temp = device_ccd.getNumber("CCD_TEMPERATURE")
@@ -181,101 +179,6 @@ class IndiSimCameraTalk:
     def disconnect_from_camera(self):
         print("Disconnecting from camera...")
         self.parent.camera_status = self.pwi4.camera_disconnect() """
-
-    def get_camera_status(self):
-        camera_status = {}
-
-        # Get the camera device.
-        ccd = "CCD Simulator"
-        device_ccd = self.indiclient.getDevice(ccd)
-        while not (device_ccd):
-            time.sleep(0.5)
-            device_ccd = self.indiclient.getDevice(ccd)
-
-        # get info from device.
-        temp = device_ccd.getNumber("CCD_TEMPERATURE")
-        val = temp[0].value
-        camera_status["ccd temp"] = str(val)
-        temp = device_ccd.getSwitch("CCD_COOLER")
-        if temp[0].s == 1:
-            val = "on"
-        if temp[0].s == 0:
-            val = "off"
-        camera_status["ccd cooler"] = str(val)
-        temp = device_ccd.getSwitch("CCD_FRAME_TYPE")
-        if temp[0].s == 1:
-            val = "light"
-        if temp[1].s == 1:
-            val = "bias"
-        if temp[2].s == 1:
-            val = "dark"
-        if temp[3].s == 1:
-            val = "flat"
-        camera_status["ccd frame type"] = str(val)
-        temp = device_ccd.getNumber("CCD_BINNING")
-        camera_status["ccd horizontal binning"] = temp[0].value
-        camera_status["ccd vertical binning"] = temp[1].value
-        temp = device_ccd.getNumber("CCD_EXPOSURE")
-        camera_status["ccd exposure"] = temp[0].value
-
-        """
-new property CCD_EXPOSURE for device CCD Simulator
-new property CCD_ABORT_EXPOSURE for device CCD Simulator
-new property CCD_FRAME for device CCD Simulator
-new property CCD_FRAME_RESET for device CCD Simulator
-new property CCD_BINNING for device CCD Simulator
-new property FITS_HEADER for device CCD Simulator
-new property GUIDER_EXPOSURE for device CCD Simulator
-new property GUIDER_ABORT_EXPOSURE for device CCD Simulator
-new property GUIDER_FRAME for device CCD Simulator
-new property CCD_TEMPERATURE for device CCD Simulator
-new property CCD_TEMP_RAMP for device CCD Simulator
-new property CCD_CAPTURE_FORMAT for device CCD Simulator
-new property CCD_TRANSFER_FORMAT for device CCD Simulator
-new property CCD_INFO for device CCD Simulator
-new property GUIDER_INFO for device CCD Simulator
-new property GUIDER_BINNING for device CCD Simulator
-new property CCD_COMPRESSION for device CCD Simulator
-new property CCD1 for device CCD Simulator
-new property GUIDER_COMPRESSION for device CCD Simulator
-new property CCD2 for device CCD Simulator
-new property TELESCOPE_TIMED_GUIDE_NS for device CCD Simulator
-new property TELESCOPE_TIMED_GUIDE_WE for device CCD Simulator
-new property CCD_FRAME_TYPE for device CCD Simulator
-new property GUIDER_FRAME_TYPE for device CCD Simulator
-new property TELESCOPE_TYPE for device CCD Simulator
-new property WCS_CONTROL for device CCD Simulator
-new property UPLOAD_MODE for device CCD Simulator
-new property UPLOAD_SETTINGS for device CCD Simulator
-new property CCD_FAST_TOGGLE for device CCD Simulator
-new property CCD_FAST_COUNT for device CCD Simulator
-new property CCD_VIDEO_STREAM for device CCD Simulator
-new property STREAM_DELAY for device CCD Simulator
-new property STREAMING_EXPOSURE for device CCD Simulator
-new property FPS for device CCD Simulator
-new property RECORD_STREAM for device CCD Simulator
-new property RECORD_FILE for device CCD Simulator
-new property RECORD_OPTIONS for device CCD Simulator
-new property CCD_STREAM_FRAME for device CCD Simulator
-new property CCD_STREAM_ENCODER for device CCD Simulator
-new property CCD_STREAM_RECORDER for device CCD Simulator
-new property LIMITS for device CCD Simulator
-new property DSP_ACTIVATE_CONVOLUTION for device CCD Simulator
-new property DSP_ACTIVATE_DFT for device CCD Simulator
-new property DSP_ACTIVATE_IDFT for device CCD Simulator
-new property DSP_ACTIVATE_SPECTRUM for device CCD Simulator
-new property DSP_ACTIVATE_HISTOGRAM for device CCD Simulator
-new property DSP_ACTIVATE_WAVELETS for device CCD Simulator
-new property CCD_COOLER for device CCD Simulator
-new property CCD_GAIN for device CCD Simulator
-new property CCD_OFFSET for device CCD Simulator
-new property CCD_DIRECTORY_LOCATION for device CCD Simulator
-new property CCD_DIRECTORY_TOGGLE for device CCD Simulator
-new property FILTER_SLOT for device CCD Simulator
-new property FILTER_NAME for device CCD Simulator
-"""
-
-        return camera_status
 
     def send_command_to_camera(self, camera_command):
         # s = self.pwi4.status()
@@ -325,7 +228,7 @@ new property FILTER_NAME for device CCD Simulator
 
         elif mcom == "status":
             # print("doing status")
-            self.parent.camera_status = self.get_camera_status()
+            self.parent.camera_status = self.camera_status
             # print(self.parent.camera_status.camera.is_slewing)
 
         elif mcom == "gotoAltAz":
