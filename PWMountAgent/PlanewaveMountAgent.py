@@ -155,11 +155,11 @@ if __name__ == "__main__":
     while True:
         if pwma.message_received:
             print(pwma.current_message)
-            if pwma.current_message == "end":
-                os._exit(0)
-            else:
-                pwma.planewave_mount_talk.send_command_to_mount(pwma.current_message)
-
+            # if pwma.current_message == "end":
+            #     os._exit(0)
+            # else:
+            #     pwma.planewave_mount_talk.send_command_to_mount(pwma.current_message)
+            pwma.planewave_mount_talk.send_command_to_mount(pwma.current_message)
             pwma.message_received = 0
             """ pwma.conn.send(
                 body="Wait",
@@ -200,6 +200,7 @@ if __name__ == "__main__":
                 # time.sleep(0.5)
             # time.sleep(0.1)
         else:
+            time.sleep(0.5)
             pwma.get_status_and_broadcast()
 
 """

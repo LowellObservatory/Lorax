@@ -8,5 +8,5 @@ mount_dto_topic: lorax.timo.mount.dto
 camera_command_topic: lorax.timo.dto.camera
 camera_incoming_topic: lorax.timo.camera.broadcast
 mount_type: PWI4
-camera_type: SBIG ST-10X
-command_input_file: command_test
+camera_type: INDI CCD_Simulator
+command_input_file: command_test2

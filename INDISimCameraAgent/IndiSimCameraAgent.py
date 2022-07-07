@@ -13,7 +13,7 @@ import yaml
 import os
 import xmltodict
 import uuid
-import datetime
+from datetime import datetime, timezone
 
 from IndiSimCameraTalk import IndiSimCameraTalk
 
@@ -113,32 +113,23 @@ class IndiSimCameraAgent:
         self.planewave_mount_talk.disconnect_from_mount() """
 
     def get_status_and_broadcast(self):
-        print(self.camera_status)
+        # print(self.camera_status)
         self.indisim_camera_talk.send_command_to_camera("status")
         time.sleep(0.2)
-        print(self.camera_status)
-        # for key, value in self.camera_status.items():
-        #     print(key, " : ", value)
-        """ mydict = {
-            "camera_status": {
-                "message_id": uuid.uuid4(),
-                "timestamput": self.mount_status.response.timestamp_utc,
-                "telescope": "TiMo",
-                "device": {"type": "mount", "vendor": "planewave"},
-                "is_slewing": self.mount_status.mount.is_slewing,
-                "is_tracking": self.mount_status.mount.is_tracking,
-                "azimuth": self.mount_status.mount.azimuth_degs,
-                "altitude": self.mount_status.mount.altitude_degs,
-                "RA-J2000": self.mount_status.mount.ra_j2000_hours,
-                "dec-j2000": self.mount_status.mount.dec_j2000_degs,
-                "rotator-angle": self.mount_status.rotator.field_angle_degs,
-            }
+        # print(self.camera_status)
+
+        c_status = {
+            "message_id": uuid.uuid4(),
+            "timestamput": datetime.now(timezone.utc),
+            "root": self.camera_status,
         }
-        xml_format = xmltodict.unparse(mydict, pretty=True)
+        status = {"root": c_status}
+        xml_format = xmltodict.unparse(status, pretty=True)
+
         self.conn.send(
             body=xml_format,
-            destination="/topic/" + pwma.config["broadcast_topic"],
-        ) """
+            destination="/topic/" + isca.config["broadcast_topic"],
+        )
 
     class MyListener(stomp.ConnectionListener):
         def __init__(self, parent):
@@ -160,15 +151,15 @@ if __name__ == "__main__":
     isca = IndiSimCameraAgent()
 
     while True:
-        """if isca.message_received:
+        if isca.message_received:
             print(isca.current_message)
-            if isca.current_message == "end":
-                os._exit(0)
-            else:
-                isca.indisim_camera_talk.send_command_to_mount(isca.current_message)
-
+            # if isca.current_message == "end":
+            #     os._exit(0)
+            # else:
+            #     isca.indisim_camera_talk.send_command_to_camera(isca.current_message)
+            isca.indisim_camera_talk.send_command_to_camera(isca.current_message)
             isca.message_received = 0
-            isca.conn.send(
+            """ isca.conn.send(
                 body="Wait",
                 destination="/topic/" + isca.config["broadcast_topic"],
             )
@@ -203,13 +194,13 @@ if __name__ == "__main__":
                 isca.conn.send(
                     body="Go",
                     destination="/topic/" + isca.config["dto_topic"],
-                )
-                # time.sleep(0.5)
+                ) """
+            # time.sleep(0.5)
             # time.sleep(0.1)
-        else:"""
-        time.sleep(0.5)
-        isca.get_status_and_broadcast()
-        time.sleep(0.5)
+        else:
+            time.sleep(0.5)
+            isca.get_status_and_broadcast()
+            # time.sleep(0.5)
 
 
 # Request status from Mount, broadcast to broker

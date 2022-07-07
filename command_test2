@@ -1,0 +1,10 @@
+dto     : waituntil("time", 1:30)
+mount   : connectMount
+mount   : enableMount
+mount   : homeMount
+mount   : gotoAltAz(45.6, 170.34)
+mount   : parkMount
+mount   : disableMount
+mount   : disconnectMount
+camera  : settemp(-15.0)
+allserv : end

@@ -42,13 +42,39 @@ class IndiClient(PyIndi.BaseClient):
         pass
 
     def newSwitch(self, svp):
-        pass
+        prop_name = svp.name
+        prop_type = 1
+        prop_dict = {"prop_type": prop_type}
+        prop_dict["length"] = len(svp)
+        prop_vals = []
+        for val in svp:
+            prop_vals.append((val.name, val.s))
+        prop_dict["vals"] = prop_vals
+        self.parent.camera_status[prop_name] = prop_dict
 
     def newNumber(self, nvp):
-        pass
+        prop_name = nvp.name
+        prop_type = 0
+        prop_dict = {"prop_type": prop_type}
+        prop_dict["length"] = len(nvp)
+        prop_vals = []
+        for val in nvp:
+            prop_vals.append((val.name, val.value))
+        prop_dict["vals"] = prop_vals
+        self.parent.camera_status[prop_name] = prop_dict
 
     def newText(self, tvp):
-        pass
+        prop_name = tvp.name
+        prop_type = 2
+        # Text type
+        temp = tvp.getText()
+        prop_dict = {"prop_type": prop_type}
+        prop_dict["length"] = len(temp)
+        prop_vals = []
+        for val in temp:
+            prop_vals.append((val.name, val.text))
+        prop_dict["vals"] = prop_vals
+        self.parent.camera_status[prop_name] = prop_dict
 
     def newLight(self, lvp):
         pass
@@ -66,49 +92,55 @@ class IndiClient(PyIndi.BaseClient):
         prop_name = prop.getName()
         prop_type = prop.getType()
 
-        if prop_type == 0:
-            # Number Type
-            temp = prop.getNumber()
-            prop_dict = {"prop_type": prop_type}
-            prop_dict["value"] = temp[0].value
-            self.parent.camera_status[prop_name] = prop_dict
-        elif prop_type == 1:
-            # Switch type
-            temp = prop.getSwitch()
-            prop_dict = {"prop_type": prop_type}
-            prop_dict["length"] = len(temp)
-            prop_vals = []
-            for val in temp:
-                # print(dir(val))
-                prop_vals.append((val.name, val.s))
+        if not prop_name in self.parent.camera_status:
+            if prop_type == 0:
+                # Number Type
+                temp = prop.getNumber()
+                prop_dict = {"prop_type": prop_type}
+                prop_dict["length"] = len(temp)
+                prop_vals = []
+                for val in temp:
+                    # print(dir(val))
+                    prop_vals.append((val.name, val.value))
+                prop_dict["vals"] = prop_vals
+                self.parent.camera_status[prop_name] = prop_dict
+            elif prop_type == 1:
+                # Switch type
+                temp = prop.getSwitch()
+                prop_dict = {"prop_type": prop_type}
+                prop_dict["length"] = len(temp)
+                prop_vals = []
+                for val in temp:
+                    # print(dir(val))
+                    prop_vals.append((val.name, val.s))
+                    # print(val.name)
+                prop_dict["vals"] = prop_vals
+                self.parent.camera_status[prop_name] = prop_dict
+            elif prop_type == 2:
+                # Text type
+                temp = prop.getText()
+                # print(len(temp))
+                # print(dir(temp[0]))
+                prop_dict = {"prop_type": prop_type}
+                prop_dict["length"] = len(temp)
+                prop_vals = []
+                for val in temp:
+                    # print(dir(val))
+                    prop_vals.append((val.name, val.text))
                 # print(val.name)
-            prop_dict["vals"] = prop_vals
-            self.parent.camera_status[prop_name] = prop_dict
-        elif prop_type == 2:
-            # Text type
-            temp = prop.getText()
-            # print(len(temp))
-            # print(dir(temp[0]))
-            prop_dict = {"prop_type": prop_type}
-            prop_dict["length"] = len(temp)
-            prop_vals = []
-            for val in temp:
-                # print(dir(val))
-                prop_vals.append((val.name, val.text))
-            # print(val.name)
-            prop_dict["vals"] = prop_vals
-            self.parent.camera_status[prop_name] = prop_dict
-            # print(status[prop_name])
-        elif prop_type == 3:
-            # Light type
-            temp = prop.getLight()
-            prop_dict = {"prop_type": prop_type}
-            prop_dict["length"] = len(temp)
-            prop_vals = []
-            for val in temp:
-                prop_vals.append((val.name, val.text))
-            prop_dict["vals"] = prop_vals
-            self.parent.camera_status[prop_name] = prop_dict
+                prop_dict["vals"] = prop_vals
+                self.parent.camera_status[prop_name] = prop_dict
+                # print(status[prop_name])
+            elif prop_type == 3:
+                # Light type
+                temp = prop.getLight()
+                prop_dict = {"prop_type": prop_type}
+                prop_dict["length"] = len(temp)
+                prop_vals = []
+                for val in temp:
+                    prop_vals.append((val.name, val.text))
+                prop_dict["vals"] = prop_vals
+                self.parent.camera_status[prop_name] = prop_dict
 
         # print(status)
         # print("       ")
@@ -140,17 +172,10 @@ class IndiSimCameraTalk:
         # temp = device_ccd.getNumber("CCD_TEMPERATURE")
         # print("temp = " + str(temp[0].value))
 
-        """ print("setting temp to -10")
-        temp = device_ccd.getNumber("CCD_TEMPERATURE")
-        temp[0].value = np.float(10)  ### new temperature to reach
-        indiclient.sendNewNumber(temp)
-
-        countdown = 50
-        while countdown > 0:
-            temp = device_ccd.getNumber("CCD_TEMPERATURE")
-            print("temp = " + str(temp[0].value))
-            time.sleep(0.5)
-            countdown -= 1 """
+        # print("setting temp to -10")
+        # temp = device_ccd.getNumber("CCD_TEMPERATURE")
+        # temp[0].value = np.float(-10)  ### new temperature to reach
+        # self.indiclient.sendNewNumber(temp)
 
         """ ccd_connect = device_ccd.getSwitch("CONNECTION")
         while not (ccd_connect):
@@ -165,21 +190,6 @@ class IndiSimCameraTalk:
         # --------------------
         print("IndiSimCameraTalk: finished initialization")
 
-    """ def connect_to_camera(self):
-        self.camera_status = self.pwi4.status()
-        print("camera connected:", self.camera_status.camera.is_connected)
-
-        if not self.camera_status.camera.is_connected:
-            print("Connecting to camera...")
-            self.camera_status = self.pwi4.camera_connect()
-            print("camera connected:", self.camera_status.camera.is_connected)
-        self.parent.camera_status = self.camera_status
-        return ()
-
-    def disconnect_from_camera(self):
-        print("Disconnecting from camera...")
-        self.parent.camera_status = self.pwi4.camera_disconnect() """
-
     def send_command_to_camera(self, camera_command):
         # s = self.pwi4.status()
         # s = self.pwi4.camera_connect()
@@ -192,76 +202,30 @@ class IndiSimCameraTalk:
 
         if mcom == "enablecamera":
             print("Enable the camera")
-            self.parent.camera_status = self.pwi4.camera_enable(0)
-            self.parent.camera_status = self.pwi4.camera_enable(1)
 
         elif mcom == "disablecamera":
             print("Disable the camera")
 
         elif mcom == "connectcamera":
             print("Connect the camera")
-            self.camera_status = self.pwi4.status()
-            if not self.camera_status.camera.is_connected:
-                print("Connecting to camera...")
-                self.camera_status = self.pwi4.camera_connect()
-                print("camera connected:", self.camera_status.camera.is_connected)
-            print(
-                "  RA/Dec: %.4f, %.4f"
-                % (
-                    self.camera_status.camera.ra_j2000_hours,
-                    self.camera_status.camera.dec_j2000_degs,
-                )
-            )
-            self.parent.camera_status = self.camera_status
 
         elif mcom == "disconnectcamera":
             print("Disconnecting from camera...")
-            self.parent.camera_status = self.pwi4.camera_disconnect()
 
-        elif mcom == "homecamera":
-            print("Home the camera")
-            self.parent.camera_status = self.pwi4.camera_find_home()
-
-        elif mcom == "parkcamera":
-            print("Park the camera")
-            self.parent.camera_status = self.pwi4.camera_park()
+        elif mcom == "settemp":
+            # Get the arguments.
+            # setTemp(-45.0)
+            temperature = float(
+                camera_command[camera_command.find("(") + 1 : camera_command.find(")")]
+            )
+            print("setting temp to " + str(temperature))
+            temp = self.device_ccd.getNumber("CCD_TEMPERATURE")
+            temp[0].value = np.float(temperature)  ### new temperature to reach
+            self.indiclient.sendNewNumber(temp)
 
         elif mcom == "status":
             # print("doing status")
             self.parent.camera_status = self.camera_status
-            # print(self.parent.camera_status.camera.is_slewing)
-
-        elif mcom == "gotoAltAz":
-            # Get the arguments.
-            # gotoAltAz(45.0, 200.0)
-            alt = float(
-                camera_command[camera_command.find("(") + 1 : camera_command.find(",")]
-            )
-            az = float(
-                camera_command[camera_command.find(",") + 2 : camera_command.find(")")]
-            )
-            print(camera_command)
-            print("Slewing...")
-            self.parent.camera_status = self.pwi4.camera_goto_alt_az(alt, az)
-            """ while True:
-                self.camera_status = self.pwi4.status()
-                print(
-                    "alt: %.5f hours;  az: %.4f degs, Axis0 dist: %.1f arcsec, Axis1 dist: %.1f arcsec"
-                    % (
-                        self.camera_status.camera.altitude_degs,
-                        self.camera_status.camera.azimuth_degs,
-                        self.camera_status.camera.axis0.dist_to_target_arcsec,
-                        self.camera_status.camera.axis1.dist_to_target_arcsec,
-                    )
-                )
-                self.parent.camera_status = self.camera_status
-                if not self.camera_status.camera.is_slewing:
-                    break
-                time.sleep(0.2) """
-
-            """ print("Slew complete. Stopping...")
-            self.pwi4.camera_stop()
-            print("camera to Alt, Az") """
 
         else:
             print("Unknown command")
