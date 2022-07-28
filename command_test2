@@ -3,6 +3,8 @@ mount   : connectMount
 mount   : enableMount
 mount   : homeMount
 mount   : gotoAltAz(45.6, 170.34)
+mount   : gotoAltAz(20.6, 340.34)
+mount   : gotoAltAz(75.6, 10.34)
 mount   : parkMount
 mount   : disableMount
 mount   : disconnectMount

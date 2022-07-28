@@ -16,7 +16,7 @@ info:
     url: https://www.apache.org/licenses/LICENSE-2.0
 servers:
   prototyping:
-    url: tanagra.lowell.edu
+    url: bandersnatch.lowell.edu
     protocol: stomp
     protocolVersion: "1.2"
     description: Prototyping server.
