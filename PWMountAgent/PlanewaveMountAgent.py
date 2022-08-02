@@ -111,7 +111,7 @@ class PlanewaveMountAgent:
 
     def get_status_and_broadcast(self):
         self.planewave_mount_talk.send_command_to_mount("status")
-        time.sleep(0.2)
+        time.sleep(0.01)
         mydict = {
             "mount_status": {
                 "message_id": uuid.uuid4(),
