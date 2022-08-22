@@ -1,0 +1,10 @@
+---
+log_file: "locutus.log"
+broker_hosts:
+  - tanagra
+  - 61613
+incoming_mount_topic: "lorax.timo.mount.broadcast"
+incoming_camera_topic: "lorax.timo.camera.broadcast"
+incoming_weather_topic: "lorax.timo.weather.broadcast"
+dictionary_request_topic: "lorax.timo.locutus.dictrequest"
+dictionary_broadcast_topic: "lorax.timo.locutus.dictbroadcast"
