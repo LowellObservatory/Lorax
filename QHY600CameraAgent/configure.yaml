@@ -8,4 +8,4 @@ camera_port: 7624
 camera_type: QHY600
 dto_topic: lorax.ldtboresight.camera1.dto
 incoming_topic: lorax.ldtboresight.dto.camera1
-log_file: qhy_camera.log
+log_file: qhy600_camera.log

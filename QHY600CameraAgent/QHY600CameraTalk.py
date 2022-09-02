@@ -146,9 +146,9 @@ class IndiClient(PyIndi.BaseClient):
         # print("       ")
 
 
-class QHYCameraTalk:
+class QHY600CameraTalk:
     """
-    Communications with INDI QHY Camera.
+    Communications with INDI QHY600 Camera.
     """
 
     def __init__(self, parent, host, port):
@@ -191,7 +191,7 @@ class QHYCameraTalk:
         # --------------------
 
         print(f"Result of device_ccd.isConnected(): {device_ccd.isConnected()}")
-        print("QHYCameraTalk: finished initialization")
+        print("QHY600CameraTalk: finished initialization")
 
     def send_command_to_camera(self, camera_command):
         # s = self.pwi4.status()

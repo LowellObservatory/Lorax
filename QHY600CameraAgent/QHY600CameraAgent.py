@@ -15,13 +15,13 @@ import xmltodict
 import uuid
 from datetime import datetime, timezone
 
-from QHYCameraTalk import QHYCameraTalk
+from QHY600CameraTalk import QHY600CameraTalk
 
 # Set stomp so it only logs WARNING and higher messages. (default is DEBUG)
 logging.getLogger("stomp").setLevel(logging.WARNING)
 
 
-class QHYCameraAgent:
+class QHY600CameraAgent:
     hosts = ""
     log_file = ""
     camera_host = ""
@@ -35,7 +35,7 @@ class QHYCameraAgent:
 
         self.camera_status = {}
         # Read the config file.
-        with open("QHYCameraAgent/configure.yaml", "r") as stream:
+        with open("QHY600CameraAgent/configure.yaml", "r") as stream:
             try:
                 self.config = yaml.safe_load(stream)
             except yaml.YAMLError as exc:
@@ -88,7 +88,7 @@ class QHYCameraAgent:
 
         # Send a message to "outgoing_topic" that gives "alive" status.
         self.conn.send(
-            body="qhy_camera_agent alive",
+            body="qhy600_camera_agent alive",
             destination="/topic/" + self.config["broadcast_topic"],
         )
 
@@ -96,10 +96,10 @@ class QHYCameraAgent:
         self.camera_host = self.config["camera_host"]
         self.camera_port = self.config["camera_port"]
 
-        self.qhy_camera_talk = QHYCameraTalk(
+        self.qhy600_camera_talk = QHY600CameraTalk(
             self, host=self.camera_host, port=self.camera_port
         )
-        # self.qhy_camera_talk.send_command_to_camera("status")
+        # self.qhy600_camera_talk.send_command_to_camera("status")
         # print("Getting camera status:")
         # time.sleep(2)
         # print(self.camera_status)
@@ -116,7 +116,7 @@ class QHYCameraAgent:
 
     def get_status_and_broadcast(self):
         # print(self.camera_status)
-        self.qhy_camera_talk.send_command_to_camera("status")
+        self.qhy600_camera_talk.send_command_to_camera("status")
         time.sleep(0.2)
         # print(self.camera_status)
 
@@ -150,7 +150,7 @@ class QHYCameraAgent:
 
 
 if __name__ == "__main__":
-    qca = QHYCameraAgent()
+    qca = QHY600CameraAgent()
 
     while True:
         if qca.message_received:
@@ -159,7 +159,7 @@ if __name__ == "__main__":
             #     os._exit(0)
             # else:
             #     isca.indisim_camera_talk.send_command_to_camera(isca.current_message)
-            qca.qhy_camera_talk.send_command_to_camera(qca.current_message)
+            qca.qhy600_camera_talk.send_command_to_camera(qca.current_message)
             qca.message_received = 0
             """ isca.conn.send(
                 body="Wait",
