@@ -5,8 +5,8 @@ broker_hosts:
   - 61613
 mount_command_topic: lorax.timo.dto.mount
 mount_dto_topic: lorax.timo.mount.dto
-camera_command_topic: lorax.timo.dto.camera
-camera_incoming_topic: lorax.timo.camera.broadcast
+camera_command_topic: lorax.ldtboresight.dto.camera1
+camera_incoming_topic: lorax.ldtboresight.camera1.broadcast
 mount_type: PWI4
-camera_type: INDI CCD_Simulator
-command_input_file: command_test2
+camera_type: QHY600
+command_input_file: command_test3

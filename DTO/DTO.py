@@ -122,6 +122,8 @@ if __name__ == "__main__":
             targ = comm[0 : comm.find(":")]
             comm = comm[comm.find(":") + 2 :]
 
+            print(f"Command: {targ}: {comm}")
+
             if "mount" in targ:
                 dto.conn.send(
                     body=comm,
