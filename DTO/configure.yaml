@@ -7,6 +7,7 @@ mount_command_topic: lorax.timo.dto.mount
 mount_dto_topic: lorax.timo.mount.dto
 camera_command_topic: lorax.ldtboresight.dto.camera1
 camera_incoming_topic: lorax.ldtboresight.camera1.broadcast
+camera_dto_topic: lorax.ldtboresight.camera1.dto
 mount_type: PWI4
 camera_type: QHY600
-command_input_file: command_test3
+command_input_file: command_test_qhy

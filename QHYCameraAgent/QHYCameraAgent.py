@@ -99,7 +99,9 @@ class QHYCameraAgent:
         self.qhy_camera_talk = QHYCameraTalk(
             self, host=self.camera_host, port=self.camera_port
         )
-        print("got here")
+        # self.qhy_camera_talk.send_command_to_camera("status")
+        # print("Getting camera status:")
+        # time.sleep(2)
         # print(self.camera_status)
 
         """  # Connect to the mount.
@@ -152,7 +154,7 @@ if __name__ == "__main__":
 
     while True:
         if qca.message_received:
-            print(qca.current_message)
+            print(f"Message received:  {qca.current_message}")
             # if isca.current_message == "end":
             #     os._exit(0)
             # else:
@@ -201,6 +203,3 @@ if __name__ == "__main__":
             time.sleep(0.5)
             qca.get_status_and_broadcast()
             # time.sleep(0.5)
-
-
-# Request status from Mount, broadcast to broker

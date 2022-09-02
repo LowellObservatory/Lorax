@@ -19,7 +19,7 @@ class IndiClient(PyIndi.BaseClient):
         status = {}
 
     def newDevice(self, d):
-        # print("Receiving Device... " + d.getDeviceName())
+        print("Receiving Device... " + d.getDeviceName())
         self.camera = d
         self.parent.camera = d
 
@@ -161,9 +161,10 @@ class QHYCameraTalk:
 
         self.indiclient.connectServer()
 
-        ccd = "QHY600M"
+        ccd = "QHY CCD QHY600M-d0a5a44"
         device_ccd = self.indiclient.getDevice(ccd)
         while not (device_ccd):
+            print("Waiting on connection to the CMOS Camera...")
             time.sleep(0.5)
             device_ccd = self.indiclient.getDevice(ccd)
 
@@ -177,7 +178,7 @@ class QHYCameraTalk:
         # temp[0].value = np.float(-10)  ### new temperature to reach
         # self.indiclient.sendNewNumber(temp)
 
-        """ ccd_connect = device_ccd.getSwitch("CONNECTION")
+        ccd_connect = device_ccd.getSwitch("CONNECTION")
         while not (ccd_connect):
             print("not connected")
             time.sleep(0.5)
@@ -186,8 +187,10 @@ class QHYCameraTalk:
             print("still not connected")
             ccd_connect[0].s = PyIndi.ISS_ON  # the "CONNECT" switch
             ccd_connect[1].s = PyIndi.ISS_OFF  # the "DISCONNECT" switch
-            indiclient.sendNewSwitch(ccd_connect) """
+            self.indiclient.sendNewSwitch(ccd_connect)
         # --------------------
+
+        print(f"Result of device_ccd.isConnected(): {device_ccd.isConnected()}")
         print("QHYCameraTalk: finished initialization")
 
     def send_command_to_camera(self, camera_command):
@@ -220,12 +223,17 @@ class QHYCameraTalk:
             )
             print("setting temp to " + str(temperature))
             temp = self.device_ccd.getNumber("CCD_TEMPERATURE")
+            print(f"This is the return value temp: {temp}")
+            print(f"This is the return value temp type: {type(temp)}")
             temp[0].value = np.float(temperature)  ### new temperature to reach
             self.indiclient.sendNewNumber(temp)
 
         elif mcom == "status":
-            # print("doing status")
+            print("doing status")
             self.parent.camera_status = self.camera_status
+
+        elif mcom == "end":
+            pass
 
         else:
             print("Unknown command")

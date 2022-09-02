@@ -63,32 +63,21 @@ class DTO:
             self.dto_logger.error("Connection to broker failed")
 
         self.dto_logger.info("connected to broker")
-        self.dto_logger.info("subscribing to topic: " + self.config["mount_dto_topic"])
 
         # Subscribe to messages from "mount_dto_topic"
         # and "camera_dto_topic".
-        self.conn.subscribe(
-            id=1,
-            destination="/topic/" + self.config["mount_dto_topic"],
-            headers={},
-        )
+        for topic in ["mount_dto_topic", "camera_dto_topic", "camera_incoming_topic"]:
+            self.dto_logger.info("subscribing to topic: " + self.config[topic])
 
-        self.dto_logger.info("subscribed to topic " + self.config["mount_dto_topic"])
+            self.conn.subscribe(
+                id=1,
+                destination="/topic/" + self.config[topic],
+                headers={},
+            )
 
-        """     self.dto_logger.info(
-            "subscribing to topic: " + self.config["camera_incoming_topic"]
-        )
+            self.dto_logger.info("subscribed to topic " + self.config[topic])
 
-        self.conn.subscribe(
-            id=1,
-            destination="/topic/" + self.config["camera_incoming_topic"],
-            headers={},
-        )
-
-        self.dto_logger.info(
-            "subscribed to topic " + self.config["camera_incoming_topic"]
-        ) """
-
+        # Read the command input file
         self.command_input_file = self.config["command_input_file"]
 
     class MyListener(stomp.ConnectionListener):
@@ -104,7 +93,11 @@ class DTO:
             if self.parent.config["mount_dto_topic"] in topic:
                 print("message from mount: " + message.body)
                 self.parent.message_from_mount = message.body
-            # self.parent.dto_logger.info('received a message "%s"' % message.body)
+            if self.parent.config["camera_dto_topic"] in topic:
+                print("message from camera: " + message.body)
+                self.parent.message_from_camera = message.body
+                
+            self.parent.dto_logger.info('received a message "%s"' % message.body)
 
 
 if __name__ == "__main__":
