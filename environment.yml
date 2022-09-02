@@ -1,0 +1,20 @@
+name: lorax
+channels:
+  - default
+dependencies:
+  - python>=3.8,<3.10
+  - numpy>=1.21
+  - psutil
+  - PyYAML
+  - typing_extensions
+  - xmltodict
+  # Astropy Channel
+  # Conda-Forge Channel
+  - conda-forge::setuptools>=59.7
+  - conda-forge::setuptools_scm
+  - conda-forge::black
+  - conda-forge::pylint
+  - conda-forge::stomp.py
+  - pip
+  - pip:
+    - pyindi-client
