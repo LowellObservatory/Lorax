@@ -96,7 +96,10 @@ class DTO:
             if self.parent.config["camera_dto_topic"] in topic:
                 print("message from camera: " + message.body)
                 self.parent.message_from_camera = message.body
-                
+            if self.parent.config["camera_incoming_topic"] in topic:
+                print("broadcast from camera: " + message.body)
+                self.parent.message_from_camera = message.body
+
             self.parent.dto_logger.info('received a message "%s"' % message.body)
 
 

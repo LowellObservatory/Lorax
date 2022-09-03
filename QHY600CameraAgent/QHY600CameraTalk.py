@@ -233,7 +233,7 @@ class QHY600CameraTalk:
             self.parent.camera_status = self.camera_status
 
         elif mcom == "end":
-            pass
+            print("Ending...")
 
         else:
             print("Unknown command")

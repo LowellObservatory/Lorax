@@ -92,7 +92,7 @@ class QHY600CameraAgent:
             destination="/topic/" + self.config["broadcast_topic"],
         )
 
-        # Get the host and port for the connection to mount.
+        # Get the host and port for the connection to the camera.
         self.camera_host = self.config["camera_host"]
         self.camera_port = self.config["camera_port"]
 
