@@ -1,5 +1,4 @@
 dto     : waituntil("time", 1:30)
-camera  : status
-camera  : settemp(-15.0)
-camera  : expose(0.01)
+camera  : settemp(15.0)
+camera  : expose(1.0)
 camera  : end

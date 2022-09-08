@@ -8,7 +8,9 @@ Created on March 11, 2022
 import time
 import logging
 import stomp
+import xmltodict
 import yaml
+import PySimpleGUI as sg
 
 # Set stomp so it only logs WARNING and higher messages. (default is DEBUG)
 logging.getLogger("stomp").setLevel(logging.WARNING)
@@ -94,18 +96,19 @@ class DTO:
                 print("message from mount: " + message.body)
                 self.parent.message_from_mount = message.body
             if self.parent.config["camera_dto_topic"] in topic:
-                print("message from camera: " + message.body)
-                self.parent.message_from_camera = message.body
-            if self.parent.config["camera_incoming_topic"] in topic:
-                print("broadcast from camera: " + message.body)
-                self.parent.message_from_camera = message.body
+                print("message from camera: ")
+                msg = xmltodict.parse(message.body)['root']
+                ccd_tmp = float(msg['temp']['vals'].split(',')[-1].strip(')'))
+                ccd_pwr = float(msg['ccd_cooler_power']['vals'].split(',')[-1].strip(')'))
+                print(f"  ==> Camera Temp: {ccd_tmp:.1f}ºC     Cooler Power: {ccd_pwr:.1f}%")
+                self.parent.mesage_from_camera = message.body
+            # if self.parent.config["camera_incoming_topic"] in topic:
+            #     print("broadcast from camera: " + message.body)
+            #     self.parent.message_from_camera = message.body
 
             self.parent.dto_logger.info('received a message "%s"' % message.body)
 
-
-if __name__ == "__main__":
-    dto = DTO()
-
+def run_command_file(dto):
     # print(dto.command_input_file)
     with open(dto.command_input_file) as fp:
         line = fp.readline()
@@ -145,3 +148,23 @@ if __name__ == "__main__":
             line = fp.readline()
             time.sleep(1.0)
             cnt += 1
+
+
+
+if __name__ == "__main__":
+    dto = DTO()
+
+    sg.theme('BluePurple')
+
+    layout = [[sg.Button('RUN'), sg.Button('Exit')]]
+
+    window = sg.Window('DTO GUI', layout)
+
+    while True:  # Event Loop
+        event, values = window.read()
+        print(event, values)
+        if event == sg.WIN_CLOSED or event == 'Exit':
+            break
+        if event == 'RUN':
+            run_command_file(dto)
+    window.close()

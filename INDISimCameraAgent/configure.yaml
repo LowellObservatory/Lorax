@@ -1,11 +1,11 @@
 ---
-broadcast_topic: lorax.timo.camera.broadcast
+broadcast_topic: lorax.ldtboresight.camera1.broadcast
 broker_hosts:
   - tanagra
   - 61613
-camera_host: morgan.lowell.edu
+camera_host: fishtank-pi.local
 camera_port: 7624
 camera_type: INDI CCD Simulator
-dto_topic: lorax.timo.camera.dto
-incoming_topic: lorax.timo.dto.camera
+dto_topic: lorax.ldtboresight.camera1.dto
+incoming_topic: lorax.ldtboresight.dto.camera1
 log_file: IndiSim_camera.log

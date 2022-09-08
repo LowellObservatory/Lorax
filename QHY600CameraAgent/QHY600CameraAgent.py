@@ -133,6 +133,22 @@ class QHY600CameraAgent:
             destination="/topic/" + qca.config["broadcast_topic"],
         )
 
+        # Just send the camera temperature to DTO
+        self.conn.send(
+            body=xmltodict.unparse(
+                {
+                    "root": {
+                        "temp": self.camera_status["CCD_TEMPERATURE"],
+                        "ccd_cooler": self.camera_status["CCD_COOLER"],
+                        "ccd_cooler_mode": self.camera_status["CCD_COOLER_MODE"],
+                        "ccd_cooler_power": self.camera_status["CCD_COOLER_POWER"],
+                    }
+                },
+                pretty=True,
+            ),
+            destination="/topic/" + qca.config["dto_topic"],
+        )
+
     class MyListener(stomp.ConnectionListener):
         def __init__(self, parent):
             self.parent = parent

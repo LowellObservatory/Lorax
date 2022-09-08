@@ -3,9 +3,9 @@ broadcast_topic: lorax.ldtboresight.camera1.broadcast
 broker_hosts:
   - tanagra
   - 61613
-camera_host: 127.0.0.1
+camera_host: localhost
 camera_port: 7624
-camera_type: QHY600
+camera_type: QHY CCD QHY600M-d0a5a44
 dto_topic: lorax.ldtboresight.camera1.dto
 incoming_topic: lorax.ldtboresight.dto.camera1
 log_file: qhy600_camera.log
