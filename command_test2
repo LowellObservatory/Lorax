@@ -9,4 +9,5 @@ mount   : parkMount
 mount   : disableMount
 mount   : disconnectMount
 camera  : settemp(-15.0)
+sleep   : 10
 allserv : end
